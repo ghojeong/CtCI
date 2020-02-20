@@ -15,9 +15,7 @@ Cracking the Coding Interview를 공부한 내용을 정리
 ```sh
 javac -d ./classes ./**/*.java
 
-cd ./classes
-
-java ${packageName}.${className}
+java -cp ./classes ${packageName}.${className}
 ```
 
 ## 진도 상황
