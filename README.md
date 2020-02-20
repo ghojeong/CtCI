@@ -19,3 +19,9 @@ java -cp . ${packageName}.${className}
 ```
 
 ## 진도 상황
+
+### AS-IS
+
+### TO-BE
+
+- Ch.01 까지 진행
