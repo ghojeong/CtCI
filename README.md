@@ -1,4 +1,4 @@
-# CtCI
+# [CtCI](https://github.com/careercup/CtCI-6th-Edition)
 
 Cracking the Coding Interview를 공부한 내용을 정리
 
@@ -17,3 +17,5 @@ cd ./classes
 
 java -cp . ${packageName}.${className}
 ```
+
+## 진도 상황
