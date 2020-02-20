@@ -10,8 +10,10 @@ Cracking the Coding Interview를 공부한 내용을 정리
 
 ## Command
 
+아래 커맨드는 /Java/ 디렉토리 위치에서 실행한다.
+
 ```sh
-javac -d ./classes ./*.java
+javac -d ./classes ./**/*.java
 
 cd ./classes
 
