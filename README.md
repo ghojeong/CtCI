@@ -17,7 +17,7 @@ javac -d ./classes ./**/*.java
 
 cd ./classes
 
-java -cp . ${packageName}.${className}
+java ${packageName}.${className}
 ```
 
 ## 진도 상황
