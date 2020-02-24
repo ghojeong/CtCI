@@ -1,6 +1,6 @@
 # [CtCI](https://github.com/careercup/CtCI-6th-Edition)
 
-Cracking the Coding Interview를 공부한 내용을 정리
+[Cracking the Coding Interview](http://www.yes24.com/Product/Goods/44305533)를 공부한 내용을 정리
 
 ## 공부계획
 
