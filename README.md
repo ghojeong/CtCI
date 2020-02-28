@@ -18,6 +18,11 @@ java -cp ./Java/classes ${packageName}.${className}
 rm -rf ./Java/classes
 ```
 
+## CtCI의 페이지
+
+크롬으로 CtCI.pdf 를 열었을때를 기준으로,
+목차에 적힌 페이지에 숫자 12를 더하면 된다.
+
 ## 진도 상황
 
 ### AS-IS
