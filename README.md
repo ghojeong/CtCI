@@ -8,7 +8,7 @@
 - Java 코드로 된 답지를 다운 받아서, 함수와 필수 로직부분만 지우고, TODO로 직접 작성한다.
 - vscode로 작성하고, 터미널로 javac를 활용한다.
 - Ch 01 - 10 까지만 한다.
-- 원본 풀이는 master에 그대로 놔두고, feature/ghojeong 에서 TODO로 지워서 작업한다.
+- 원본 풀이는 master에 그대로 놔두고, feature에서 TODO로 지워서 작업한다.
 
 ## Command
 
