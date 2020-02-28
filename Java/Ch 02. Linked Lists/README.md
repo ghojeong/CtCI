@@ -1,4 +1,4 @@
-# CtCI 페이지
+# Ch 02. Linked Lists
 
 크롬으로 CtCI.pdf 를 열었을때를 기준으로 검색하기 쉽도록, 페이지를 기록한다.
 
