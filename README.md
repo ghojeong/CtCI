@@ -2,6 +2,12 @@
 
 [Cracking the Coding Interview](http://www.yes24.com/Product/Goods/44305533)의 공부 자료
 
+## 진도 상황
+
+- 고정완: Ch 01. 문제 2번
+- 전태준: Ch 01. 문제 3번
+- 이정배: Ch 01. 문제 4번
+
 ## 공부 계획
 
 - [CtCI.pdf](./CtCI.pdf)에 나와있는 문제들을 푼다.
