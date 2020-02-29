@@ -19,7 +19,7 @@ java -cp ./Java/classes ${packageName}.${className}
 // 컴파일된 class 삭제
 rm -rf ./Java/classes
 
-// 원하는 곳의 디렉토리 자바만 빠르게 컴파일
+// 원하는 디렉토리만 빠르게 컴파일
 javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_01_Is_Unique/*.java
 ```
 
