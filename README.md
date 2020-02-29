@@ -13,11 +13,17 @@
 ## Command
 
 ```sh
+// 자바 컴파일
 javac -d ./Java/classes ./Java/**/*.java
 
+// 컴파일된 class 실행
 java -cp ./Java/classes ${packageName}.${className}
 
+// 컴파일된 class 삭제
 rm -rf ./Java/classes
+
+// 원하는 곳의 디렉토리 자바만 빠르게 컴파일
+javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_01_Is_Unique/*.java
 ```
 
 ## CtCI의 페이지
@@ -25,10 +31,18 @@ rm -rf ./Java/classes
 크롬으로 CtCI.pdf 를 열었을때를 기준으로,
 목차에 적힌 페이지에 숫자 12를 더하면 된다.
 
-## 진도 상황
+## 스터디 계획
 
-### AS-IS
+- 매주 화목토 오후 10시에 라이브 코딩 연습
+  - 오후 10시: 정배형 퇴근시간 고려
+  - 다른 일정과 상관없이, 습관적으로 하는 스터디
+- 한 사람당 매주 CtCI의 2문제 라이브 코딩
+  - 화(고정완), 목(전태준), 토(이정배)
+  - 서로 겹치는 일이 없도록, 매주 토요일날 다음주에 무슨 문제 풀 건지 미리 의논하기
+  - 한명이 라이브 코딩 interviewee, 나머지가 interviewer가 된다.
+  - 결과: 매주 문제 6개씩 진도를 나가게 됨
+- 시간이 없으면 일요일에 놀지말고, 2문제 미리 풀어두고, 설명 쉽게 주석 달아 놓자
 
-### TO-BE
+## 사용툴
 
-- Ch.01 까지 진행
+- Skype로 통화 및 화면 공유
