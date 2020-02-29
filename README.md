@@ -4,7 +4,7 @@
 
 ## 공부 계획
 
-- [CtCI.pdf](./CtCI.pdf) 에 나와있는 문제들을 푼다.
+- [CtCI.pdf](./CtCI.pdf)에 나와있는 문제들을 푼다.
 - Java 코드로 된 답지를 다운 받아서, 함수와 필수 로직부분만 지우고, TODO로 라이브 코딩한다.
 
 ## Command
@@ -25,7 +25,7 @@ javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_01_Is_Unique/*.j
 
 ## 스터디 계획
 
-- 사용툴: Skype
+- 사용툴: [Skype](https://skype.daesung.com/main.asp)
 - 일시: 매주 화목토 오후 10
   - 화(고정완), 목(전태준), 토(이정배)
   - 최대 1시간 (오후 10시 - 11시) 진행
