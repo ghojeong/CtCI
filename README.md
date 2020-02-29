@@ -4,8 +4,7 @@
 
 ## 공부 계획
 
-- Cracking the Coding Interview 에 나와있는 문제들을 푼다.
-  - Ch.01 부터 10 까지 푼다.
+- [CtCI.pdf](./CtCI.pdf) 에 나와있는 문제들을 푼다.
 - Java 코드로 된 답지를 다운 받아서, 함수와 필수 로직부분만 지우고, TODO로 라이브 코딩한다.
 
 ## Command
@@ -24,17 +23,12 @@ rm -rf ./Java/classes
 javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_01_Is_Unique/*.java
 ```
 
-## CtCI의 페이지
-
-크롬으로 CtCI.pdf 를 열었을때를 기준으로,
-목차에 적힌 페이지에 숫자 12를 더하면 된다.
-
 ## 스터디 계획
 
+- 사용툴: Skype
 - 일시: 매주 화목토 오후 10
   - 화(고정완), 목(전태준), 토(이정배)
   - 최대 1시간 (오후 10시 - 11시) 진행
-- 사용툴: Skype
 
 ## Tip
 
