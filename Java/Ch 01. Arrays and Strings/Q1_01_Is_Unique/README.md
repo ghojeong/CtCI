@@ -1,5 +1,8 @@
 # Q1_01_Is_Unique
 
+- 문제 페이지: 102
+- 풀이 페이지: 204
+
 ## Script
 
 ```script

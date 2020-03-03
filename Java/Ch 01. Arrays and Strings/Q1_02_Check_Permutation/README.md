@@ -1,5 +1,8 @@
 # Q1_02_Check_Permutation
 
+- 문제 페이지: 102
+- 풀이 페이지: 205
+
 ## Script
 
 ```script

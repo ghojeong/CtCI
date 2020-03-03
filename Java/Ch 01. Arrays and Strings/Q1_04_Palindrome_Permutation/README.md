@@ -1,5 +1,8 @@
 # Q1_04_Palindrome_Permutation
 
+- 문제 페이지: 103
+- 풀이 페이지: 207
+
 ## Script
 
 ```script
