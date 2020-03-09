@@ -26,9 +26,6 @@ java -cp ./Java/classes ${packageName}.${className}
 
 // 컴파일된 class 삭제
 rm -rf ./Java/classes
-
-// 원하는 디렉토리만 빠르게 컴파일
-javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_01_Is_Unique/*.java
 ```
 
 ## 스터디 계획
@@ -46,5 +43,6 @@ javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_01_Is_Unique/*.j
 ## 회의 내용
 
 - Ch.01 부터 10 까지 반복 순회
-- 한사람당 일단 1문제씩 풀기
 - 매주 챕터 하나씩 진도나가기
+- 먼저 주석 부터 다 써놓고, TODO를 하나하나 구현해나가기
+- 풀이가 끝나고 BigO 계산하고, 개선할 수 있는 부분 피드백 주기
