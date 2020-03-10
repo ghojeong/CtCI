@@ -3,6 +3,10 @@
 - 문제 페이지: 106
 - 풀이 페이지: 220
 
+## 읽을거리
+
+[List 인터페이스의 구현체 비교](https://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=220991199432&redirect=Dlog&widgetTypeCall=true&directAccess=false)
+
 ## Script
 
 ```script
