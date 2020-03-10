@@ -3,6 +3,7 @@ package Q2_01_Remove_Dups;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Iterator;
+import java.util.Random;
 
 public class QuestionGho {
   private static LinkedList<Integer> deleteDups(LinkedList<Integer> ll) {
@@ -20,10 +21,10 @@ public class QuestionGho {
   }
 
   public static void main(String[] args) {
-
     LinkedList<Integer> ll = new LinkedList<Integer>();
+    Random random = new Random();
     for (int i = 1; i < 100; i++) {
-      ll.add(i % 10);
+      ll.add(random.nextInt(50));
     }
     System.out.println(ll.toString());
     System.out.println();
