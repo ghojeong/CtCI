@@ -6,25 +6,25 @@ import java.util.Iterator;
 import java.util.Random;
 
 public class QuestionGho {
-  private static LinkedList<Integer> deleteDups(LinkedList<Integer> ll) {
-    LinkedList<Integer> deletedLl = new LinkedList<Integer>();
-    HashSet<Integer> set = new HashSet<Integer>();
-    Iterator<Integer> itr = ll.iterator();
-    while (itr.hasNext()) {
-      int val = itr.next();
-      if (!set.contains(val)) {
+  private static <T> LinkedList<T> deleteDups(LinkedList<T> ll) {
+    HashSet<T> set = new HashSet<T>();
+    Iterator<T> itr = ll.iterator();
+    while (itr.hasNext()) { // O(n)
+      T val = itr.next();
+      if (set.contains(val)) { // O(1)
+        itr.remove(); // O(1)
+      } else {
         set.add(val);
-        deletedLl.add(val);
       }
     }
-    return deletedLl;
+    return ll;
   }
 
   public static void main(String[] args) {
-    LinkedList<Integer> ll = new LinkedList<Integer>();
+    LinkedList<Character> ll = new LinkedList<Character>();
     Random random = new Random();
     for (int i = 1; i < 100; i++) {
-      ll.add(random.nextInt(50));
+      ll.add((char) (random.nextInt(20) + 63));
     }
     System.out.println(ll.toString());
     System.out.println();
