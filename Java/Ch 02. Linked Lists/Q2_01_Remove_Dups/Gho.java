@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.Random;
 
-public class QuestionGho {
+public class Gho {
   private static <T> LinkedList<T> deleteDups(LinkedList<T> ll) {
     HashSet<T> set = new HashSet<T>();
     Iterator<T> itr = ll.iterator();
