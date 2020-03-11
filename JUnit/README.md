@@ -7,9 +7,9 @@
 ```script
 cd ./JUnit
 
-javac -cp .:junit-4.13.jar:hamcrest-core-1.3.jar CalculatorTest.java
+javac -Xlint -cp .:junit-4.13.jar:hamcrest-core-1.3.jar ${ClassName}Test.java
 
-java -cp .:junit-4.13.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore CalculatorTest
+java -cp .:junit-4.13.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore ${ClassName}Test
 ```
 
 ## 취지
