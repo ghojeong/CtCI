@@ -25,7 +25,7 @@ javac -d ./Java/classes ./Java/**/*.java
 java -cp ./Java/classes ${packageName}.${className}
 
 // 컴파일된 class 삭제
-rm -rf ./Java/classes
+rm -rf ./Java/classes && rm ./JUnit/*.class
 ```
 
 ## 스터디 계획
