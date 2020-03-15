@@ -1,4 +1,4 @@
-# Q1_02_Check_Permutation
+# Q2_02_Return_Kth_To_Last
 
 - 문제 페이지: 106
 - 풀이 페이지: 221

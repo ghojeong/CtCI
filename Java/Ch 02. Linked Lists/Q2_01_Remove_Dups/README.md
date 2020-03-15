@@ -1,4 +1,4 @@
-# Q1_02_Check_Permutation
+# Q2_01_Remove_Dups
 
 - 문제 페이지: 106
 - 풀이 페이지: 220

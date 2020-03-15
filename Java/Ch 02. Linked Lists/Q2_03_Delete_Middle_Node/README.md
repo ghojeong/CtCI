@@ -1,4 +1,4 @@
-# Q1_02_Check_Permutation
+# Q2_03_Delete_Middle_Node
 
 - 문제 페이지: 106
 - 풀이 페이지: 223
