@@ -10,6 +10,8 @@ javac -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 03.\ St
 
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionA
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionB
+
+java -cp ./Java/classes Q3_01_Three_in_One.QuestionGho
 ```
 
 ## Output
