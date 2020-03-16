@@ -1,6 +1,6 @@
 package Q1_02_Check_Permutation;
 
-public class GhoA {
+public class QuestionGhoA {
 
   public static char[] sortCharArray(char[] charArray) {
     for (int i = 1; i < charArray.length; i++) {

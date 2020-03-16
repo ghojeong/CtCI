@@ -11,8 +11,8 @@ javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_02_Check_Permuta
 java -cp ./Java/classes Q1_02_Check_Permutation.QuestionA
 java -cp ./Java/classes Q1_02_Check_Permutation.QuestionB
 
-java -cp ./Java/classes Q1_02_Check_Permutation.GhoA
-java -cp ./Java/classes Q1_02_Check_Permutation.GhoB
+java -cp ./Java/classes Q1_02_Check_Permutation.QuestionGhoA
+java -cp ./Java/classes Q1_02_Check_Permutation.QuestionGhoB
 ```
 
 ## Output

@@ -17,9 +17,9 @@ java -cp ./Java/classes Q2_01_Remove_Dups.QuestionB
 java -cp ./Java/classes Q2_01_Remove_Dups.QuestionC
 java -cp ./Java/classes Q2_01_Remove_Dups.Tester
 
-javac -Xlint -d ./Java/classes ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/Gho.java
+javac -Xlint -d ./Java/classes ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/QuestionGho.java
 
-java -cp ./Java/classes Q2_01_Remove_Dups.Gho
+java -cp ./Java/classes Q2_01_Remove_Dups.QuestionGho
 ```
 
 ## Output
