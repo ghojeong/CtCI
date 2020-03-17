@@ -12,6 +12,7 @@ java -cp ./Java/classes Q3_01_Three_in_One.QuestionA
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionB
 
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionGho
+java -cp ./Java/classes Q3_01_Three_in_One.QuestionJvhe
 ```
 
 ## Output
