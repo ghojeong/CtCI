@@ -1,11 +1,9 @@
 package Q3_01_Three_in_One;
 
-import java.util.Arrays;
-
 public class QuestionGhoA {
 
   public static void main(String[] args) throws Exception {
-    GhoFixedMultiStacks stacks = new GhoFixedMultiStacks(4);
+    GhoFixedMultiStack stacks = new GhoFixedMultiStack(4);
     System.out.println(stacks);
     stacks.push(0, 10);
     System.out.println(stacks);

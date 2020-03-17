@@ -3,13 +3,13 @@ package Q3_01_Three_in_One;
 import java.util.EmptyStackException;
 import java.util.Arrays;
 
-public class GhoFixedMultiStacks {
+public class GhoFixedMultiStack {
   private int numberOfStacks = 3;
   private int stackCapacity;
-  private int[] values;
-  private int[] sizes;
+  private int[] values; // 스택 전부의 element들
+  private int[] sizes; // 각 스택의 element 갯수
 
-  public GhoFixedMultiStacks(int stackSize) {
+  public GhoFixedMultiStack(int stackSize) {
     stackCapacity = stackSize;
     values = new int[stackSize * numberOfStacks];
     sizes = new int[numberOfStacks];

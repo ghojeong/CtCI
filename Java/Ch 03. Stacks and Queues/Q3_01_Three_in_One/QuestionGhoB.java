@@ -1,11 +1,9 @@
 package Q3_01_Three_in_One;
 
-import java.util.Arrays;
-
 public class QuestionGhoB {
 
   public static void main(String[] args) throws Exception {
-    GhoMultiStacks stacks = new GhoMultiStacks(3, 4);
+    GhoMultiStack stacks = new GhoMultiStack(3, 4);
     System.out.println(stacks);
     stacks.push(0, 10);
     System.out.println(stacks);
@@ -45,7 +43,5 @@ public class QuestionGhoB {
     System.out.println(stacks);
     stacks.push(2, 35);
     System.out.println(stacks);
-
-    System.out.println("Final Stack: " + Arrays.toString(stacks.getValues()));
   }
 }
