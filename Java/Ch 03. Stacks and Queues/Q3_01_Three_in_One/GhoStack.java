@@ -4,22 +4,22 @@ import java.util.EmptyStackException;
 
 public class GhoStack<T> {
   private static class Node<T> {
-    private T data;
+    private T val;
     private Node<T> next;
 
-    public Node(T data) {
-      this.data = data;
+    public Node(T val) {
+      this.val = val;
     }
 
-    public T getData() {
-      return this.data;
+    public T getVal() {
+      return this.val;
     }
   }
 
   private Node<T> top;
 
-  public void push(T data) {
-    Node<T> t = new Node<T>(data);
+  public void push(T val) {
+    Node<T> t = new Node<T>(val);
     t.next = top;
     top = t;
   }
@@ -31,14 +31,14 @@ public class GhoStack<T> {
   public T peek() {
     if (isEmpty())
       throw new EmptyStackException();
-    return top.getData();
+    return top.getVal();
   }
 
   public T pop() {
     if (isEmpty())
       throw new EmptyStackException();
-    T data = top.getData();
+    T val = top.getVal();
     top = top.next;
-    return data;
+    return val;
   }
 }
