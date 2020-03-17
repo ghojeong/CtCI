@@ -4,8 +4,8 @@ import java.util.EmptyStackException;
 import java.util.ArrayList;
 
 public class GhoStack<T> {
-  // TODO:
   private static class Node<T> {
+    // TODO:
     private T value;
     private Node<T> next;
 
@@ -17,22 +17,26 @@ public class GhoStack<T> {
   private Node<T> top;
 
   public void push(T value) {
+    // TODO:
     Node<T> t = new Node<T>(value);
     t.next = top;
     top = t;
   }
 
   public boolean isEmpty() {
+    // TODO:
     return top == null;
   }
 
   public T peek() {
+    // TODO:
     if (isEmpty())
       throw new EmptyStackException();
     return top.value;
   }
 
   public T pop() {
+    // TODO:
     if (isEmpty())
       throw new EmptyStackException();
     T value = top.value;
