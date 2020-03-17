@@ -1,7 +1,6 @@
 package Q3_01_Three_in_One;
 
 import java.util.Arrays;
-import java.util.ArrayList;
 
 public class JvheMultiStacks<T> {
 
@@ -113,19 +112,6 @@ public class JvheMultiStacks<T> {
     }
     return null;
   }
-
-  // public String stackToString(int stackNum) {
-  // ArrayList<Integer> stack = stacks.get(stackNum).toArrayList();
-  // String str = stackNum + ": ";
-  // if (stack.size() < 1) {
-  // return str + "[]";
-  // }
-  // str += "[" + array[stack.get(0)];
-  // for (int i = 1; i < stack.size(); i++) {
-  // str += ", " + array[stack.get(i)];
-  // }
-  // return str + "]";
-  // }
 
   public String toString() {
     String str = 0 + ": " + stack0;
