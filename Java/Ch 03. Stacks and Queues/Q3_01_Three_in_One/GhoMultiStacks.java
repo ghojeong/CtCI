@@ -200,4 +200,9 @@ public class GhoMultiStacks {
     int[] items = getStackValues(stackNum);
     return stackNum + ": " + Arrays.toString(items);
   }
+
+  public String toString() {
+    String stacksStr = stackToString(0) + '\n' + stackToString(1) + '\n' + stackToString(2) + '\n';
+    return stacksStr + Arrays.toString(values) + '\n';
+  }
 }

@@ -3,9 +3,6 @@ package Q3_01_Three_in_One;
 import java.util.Arrays;
 
 public class QuestionGhoA {
-  public static void printStacks(GhoFixedMultiStacks stacks) {
-    System.out.println(Arrays.toString(stacks.getValues()));
-  }
 
   public static void main(String[] args) throws Exception {
     GhoFixedMultiStacks stacks = new GhoFixedMultiStacks(4);
