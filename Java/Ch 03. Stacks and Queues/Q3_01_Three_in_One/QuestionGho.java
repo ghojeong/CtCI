@@ -2,10 +2,10 @@ package Q3_01_Three_in_One;
 
 import java.util.Arrays;
 
-public class QuestionGhoB {
+public class QuestionGho {
 
   public static void main(String[] args) throws Exception {
-    GhoMultiStack stacks = new GhoMultiStack(3, 4);
+    GhoMultiStacks stacks = new GhoMultiStacks(3, 4);
 
     System.out.println(stacks);
 
