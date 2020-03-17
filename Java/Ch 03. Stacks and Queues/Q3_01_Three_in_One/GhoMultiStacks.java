@@ -31,7 +31,7 @@ public class GhoMultiStacks<T> {
    * exception if all stacks are full.
    */
   public void push(int stackNum, T value) {
-    System.out.println("/// Pushing stack " + stackNum + ": " + value);
+    System.out.println("\n/// Pushing stack " + stackNum + ": " + value);
 
     // TODO:
     if (isAllStacksAreFull()) {
@@ -45,7 +45,7 @@ public class GhoMultiStacks<T> {
 
   /* Get top element of stack. */
   public T peek(int stackNum) {
-    System.out.println("/// Peeking stack " + stackNum);
+    System.out.println("\n/// Peeking stack " + stackNum);
 
     // TODO:
     int idx = stacks.get(stackNum).peek();
@@ -54,7 +54,7 @@ public class GhoMultiStacks<T> {
 
   /* Remove value from stack. */
   public T pop(int stackNum) throws Exception {
-    System.out.println("/// Popping stack " + stackNum);
+    System.out.println("\n/// Popping stack " + stackNum);
 
     // TODO:
     int idx = stacks.get(stackNum).pop();
@@ -77,7 +77,7 @@ public class GhoMultiStacks<T> {
   }
 
   public String toString() {
-    String stacksStr = "\n";
+    String stacksStr = "";
     for (int i = 0; i < stacks.size(); i++) {
       stacksStr += stackToString(i) + "\n";
     }

@@ -14,7 +14,7 @@ public class QuestionGho {
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));
 
-    System.out.println("\n############ 1 ############");
+    System.out.println("\n\n############ 1 ############");
     stacks.push(0, 10);
     System.out.println(stacks);
     stacks.push(1, 20);
@@ -23,7 +23,7 @@ public class QuestionGho {
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));
 
-    System.out.println("\n############ 2 ############");
+    System.out.println("\n\n############ 2 ############");
     stacks.push(1, 21);
     System.out.println(stacks);
     stacks.push(0, 11);
@@ -32,24 +32,24 @@ public class QuestionGho {
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));
 
-    System.out.println("\n############ 3 ############");
+    System.out.println("\n\n############ 3 ############");
     stacks.pop(0);
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));
 
-    System.out.println("\n############ 4 ############");
+    System.out.println("\n\n############ 4 ############");
     stacks.push(2, 31);
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));
 
-    System.out.println("\n############ 5 ############");
+    System.out.println("\n\n############ 5 ############");
     stacks.push(0, 13);
     System.out.println(stacks);
     stacks.push(1, 22);
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));
 
-    System.out.println("\n############ 6 ############");
+    System.out.println("\n\n############ 6 ############");
     stacks.push(2, 31);
     System.out.println(stacks);
     stacks.push(2, 32);
@@ -60,7 +60,7 @@ public class QuestionGho {
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));
 
-    System.out.println("\n############ 7 ############");
+    System.out.println("\n\n############ 7 ############");
     stacks.pop(1);
     System.out.println(stacks);
     stacks.push(2, 35);
