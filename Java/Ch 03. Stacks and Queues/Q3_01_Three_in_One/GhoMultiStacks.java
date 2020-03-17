@@ -24,7 +24,6 @@ public class GhoMultiStacks<T> {
   }
 
   private boolean isAllStacksAreFull() {
-    // TODO:
     return lastArrIdx >= array.length - 1;
   }
 
@@ -35,11 +34,11 @@ public class GhoMultiStacks<T> {
   public void push(int stackNum, T value) {
     System.out.println("\n/// Pushing stack " + stackNum + ": " + value);
 
-    // TODO:
     if (isAllStacksAreFull()) {
       System.out.println("!!!!!!!!!!!!!!!! Array Is Full !!!!!!!!!!!!!!!!");
       return;
     }
+    // TODO:
     array[lastArrIdx] = value;
     stacks.get(stackNum).push(lastArrIdx);
     lastArrIdx++;
