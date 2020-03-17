@@ -18,9 +18,9 @@ public class GhoStack<T> {
 
   public void push(T value) {
     // TODO:
-    Node<T> t = new Node<T>(value);
-    t.next = top;
-    top = t;
+    Node<T> node = new Node<T>(value);
+    node.next = top;
+    top = node;
   }
 
   public boolean isEmpty() {
