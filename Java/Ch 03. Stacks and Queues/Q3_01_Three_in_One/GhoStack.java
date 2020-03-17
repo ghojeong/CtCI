@@ -1,6 +1,7 @@
 package Q3_01_Three_in_One;
 
 import java.util.EmptyStackException;
+import java.util.ArrayList;
 
 public class GhoStack<T> {
   private static class Node<T> {
@@ -9,10 +10,6 @@ public class GhoStack<T> {
 
     public Node(T value) {
       this.value = value;
-    }
-
-    public T getValue() {
-      return this.value;
     }
   }
 
@@ -31,14 +28,24 @@ public class GhoStack<T> {
   public T peek() {
     if (isEmpty())
       throw new EmptyStackException();
-    return top.getValue();
+    return top.value;
   }
 
   public T pop() {
     if (isEmpty())
       throw new EmptyStackException();
-    T value = top.getValue();
+    T value = top.value;
     top = top.next;
     return value;
+  }
+
+  public ArrayList<T> toArrayList() {
+    ArrayList<T> arrayList = new ArrayList<T>();
+    Node<T> itr = top;
+    while (itr != null) {
+      arrayList.add(itr.value);
+      itr = itr.next;
+    }
+    return arrayList;
   }
 }
