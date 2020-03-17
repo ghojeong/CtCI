@@ -12,6 +12,7 @@ public class GhoMultiStacks<T> {
   private ArrayList<GhoStack<Integer>> stacks;
 
   public GhoMultiStacks(int numOfStacks, T[] array) {
+    // TODO:
     this.array = array;
     if (numOfStacks < 1) {
       numOfStacks = 3;
@@ -23,6 +24,7 @@ public class GhoMultiStacks<T> {
   }
 
   private boolean isAllStacksAreFull() {
+    // TODO:
     return lastArrIdx >= array.length - 1;
   }
 

@@ -4,6 +4,7 @@ import java.util.EmptyStackException;
 import java.util.ArrayList;
 
 public class GhoStack<T> {
+  // TODO:
   private static class Node<T> {
     private T value;
     private Node<T> next;
