@@ -7,12 +7,12 @@ public class Main {
   public static void main(String[] args) {
 
     Random random = new Random();
-    int length = 25;
-    Integer array[] = new Integer[length];
+    int length = 20;
+    int array[] = new int[length];
     for (int i = 0; i < length; i++) {
       array[i] = 1 + random.nextInt(length);
     }
-    Integer arr[] = array.clone();
+    int arr[] = array.clone();
 
     System.out.println();
     System.out.println("arr:   " + Arrays.toString(array));
@@ -20,8 +20,8 @@ public class Main {
 
     Arrays.sort(arr);
     System.out.println("sort:  " + Arrays.toString(arr)); // 정답
-    System.out.println("Quick: " + Arrays.toString(Quick.<Integer>sort(array)));
-    System.out.println("Tim:   " + Arrays.toString(Tim.<Integer>sort(array)));
+    System.out.println("Quick: " + Arrays.toString(Quick.sorted(array)));
+    System.out.println("Tim:   " + Arrays.toString(Tim.sorted(array)));
 
     System.out.println();
     System.out.println("arr:   " + Arrays.toString(array));
