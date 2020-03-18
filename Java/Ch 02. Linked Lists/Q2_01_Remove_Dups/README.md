@@ -9,7 +9,7 @@
 
 ## Script
 
-```script
+```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/*.java
 
 java -cp ./Java/classes Q2_01_Remove_Dups.QuestionA

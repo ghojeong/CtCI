@@ -5,7 +5,7 @@
 
 ## Script
 
-```script
+```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_02_Check_Permutation/*.java
 
 java -cp ./Java/classes Q1_02_Check_Permutation.QuestionA

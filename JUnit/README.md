@@ -4,7 +4,7 @@
 
 ## script
 
-```script
+```sh
 cd ./JUnit
 
 javac -Xlint -cp .:junit-4.13.jar:hamcrest-core-1.3.jar ${ClassName}Test.java

@@ -5,7 +5,7 @@
 
 ## Script
 
-```script
+```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_01_Is_Unique/*.java
 
 java -cp ./Java/classes Q1_01_Is_Unique.QuestionA

@@ -5,7 +5,7 @@
 
 ## Script
 
-```script
+```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_03_Delete_Middle_Node/*.java
 
 java -cp ./Java/classes Q2_03_Delete_Middle_Node.Question

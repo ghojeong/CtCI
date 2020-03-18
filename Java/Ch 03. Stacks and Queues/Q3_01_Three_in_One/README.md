@@ -5,7 +5,7 @@
 
 ## Script
 
-```script
+```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 03.\ Stacks\ and\ Queues/Q3_01_Three_in_One/*.java
 
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionA
