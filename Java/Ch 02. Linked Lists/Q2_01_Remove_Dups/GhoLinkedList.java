@@ -15,11 +15,6 @@ public class GhoLinkedList<T> {
   public Node<T> head;
   public Node<T> tail;
 
-  public GhoLinkedList() {
-    this.head = null;
-    this.tail = null;
-  };
-
   public void add(T value) {
     Node<T> node = new Node(value);
     if (head == null) {
