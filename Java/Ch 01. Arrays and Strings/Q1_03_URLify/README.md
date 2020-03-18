@@ -6,7 +6,7 @@
 ## Script
 
 ```script
-javac -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_03_URLify/*.java
+javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_03_URLify/*.java
 
 java -cp ./Java/classes Q1_03_URLify.Question
 ```

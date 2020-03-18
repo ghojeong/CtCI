@@ -6,7 +6,7 @@
 ## Script
 
 ```script
-javac -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_02_Return_Kth_To_Last/*.java
+javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_02_Return_Kth_To_Last/*.java
 
 java -cp ./Java/classes Q2_02_Return_Kth_To_Last.QuestionA
 java -cp ./Java/classes Q2_02_Return_Kth_To_Last.QuestionB

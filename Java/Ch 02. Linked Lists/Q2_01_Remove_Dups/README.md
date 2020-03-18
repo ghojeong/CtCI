@@ -10,14 +10,12 @@
 ## Script
 
 ```script
-javac -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/*.java
+javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/*.java
 
 java -cp ./Java/classes Q2_01_Remove_Dups.QuestionA
 java -cp ./Java/classes Q2_01_Remove_Dups.QuestionB
 java -cp ./Java/classes Q2_01_Remove_Dups.QuestionC
 java -cp ./Java/classes Q2_01_Remove_Dups.Tester
-
-javac -Xlint -d ./Java/classes ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/QuestionGho.java
 
 java -cp ./Java/classes Q2_01_Remove_Dups.QuestionGho
 ```

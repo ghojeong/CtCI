@@ -6,7 +6,7 @@
 ## Script
 
 ```script
-javac -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 03.\ Stacks\ and\ Queues/Q3_04_Queue_via_Stacks/*.java
+javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 03.\ Stacks\ and\ Queues/Q3_04_Queue_via_Stacks/*.java
 
 java -cp ./Java/classes Q3_04_Queue_via_Stacks.Question
 ```

@@ -19,7 +19,7 @@ README.md의 유무로 풀은 문제인지 아닌지 확인한다.
 
 ```sh
 // 자바 컴파일
-javac -d ./Java/classes ./Java/**/*.java
+javac -Xlint -d ./Java/classes ./Java/**/*.java
 
 // 컴파일된 class 실행
 java -cp ./Java/classes ${packageName}.${className}
