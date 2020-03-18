@@ -15,18 +15,15 @@ public class Main {
     Integer arr[] = array.clone();
 
     System.out.println();
-    System.out.println("arr:       " + Arrays.toString(array));
+    System.out.println("arr:   " + Arrays.toString(array));
     System.out.println();
 
     Arrays.sort(arr);
-    System.out.println("sort:      " + Arrays.toString(arr)); // 정답
-    System.out.println("Quick:     " + Arrays.toString(Quick.<Integer>sort(array)));
-    System.out.println("Merge:     " + Arrays.toString(Merge.<Integer>sort(array)));
-    System.out.println("Bubble:    " + Arrays.toString(Bubble.<Integer>sort(array)));
-    System.out.println("Insertion: " + Arrays.toString(Insertion.<Integer>sort(array)));
-    System.out.println("Seletion:  " + Arrays.toString(Selection.<Integer>sort(array)));
+    System.out.println("sort:  " + Arrays.toString(arr)); // 정답
+    System.out.println("Quick: " + Arrays.toString(Quick.<Integer>sort(array)));
+    System.out.println("Tim:   " + Arrays.toString(Tim.<Integer>sort(array)));
 
     System.out.println();
-    System.out.println("arr:       " + Arrays.toString(array));
+    System.out.println("arr:   " + Arrays.toString(array));
   }
 }

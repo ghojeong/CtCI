@@ -2,10 +2,10 @@ package sort;
 
 import java.util.Arrays;
 
-public class Merge {
+public class Tim {
   public static <T> T[] sort(T[] array) {
     T[] arr = array.clone();
-    // TODO: 병합 정렬 구현
+    // TODO: 팀 정렬 구현
     Arrays.sort(arr);
     return arr;
   }
