@@ -12,6 +12,6 @@ public class QuestionGho {
     }
     System.out.println(ll);
     ll.deleteDups();
-    System.out.print(ll);
+    System.out.println(ll);
   }
 }
