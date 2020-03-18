@@ -5,7 +5,7 @@ public class Tim {
   private static int RUN = 32;
 
   // this function sorts array from left index to
-  // to right index which is of size atmost RUN
+  // to right index which is of size at most RUN
   private static void insertionSort(int[] arr, int left, int right) {
     for (int i = left + 1; i <= right; i++) {
       int temp = arr[i];
@@ -64,11 +64,11 @@ public class Tim {
     }
   }
 
-  // iterative Timsort function to sort the
+  // iterative Tim sort function to sort the
   // array[0...n-1] (similar to merge sort)
   private static void sort(int[] arr, int n) {
 
-    // Sort individual subarrays of size RUN
+    // Sort individual sub arrays of size RUN
     for (int i = 0; i < n; i += RUN) {
       insertionSort(arr, i, Math.min((i + 31), (n - 1)));
     }
