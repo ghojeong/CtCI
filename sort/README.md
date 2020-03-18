@@ -1,8 +1,11 @@
 # 정렬
 
 공부를 해 보았는데, [Quick](https://www.geeksforgeeks.org/quick-sort/) 과 [Tim](https://www.geeksforgeeks.org/timsort/) sort 가 짱이다.<br>
-2개만 제대로 외워두자.<br>
-자바와 파이썬의 기본 정렬 알고리즘은 Tim sort 이다
+2개만 제대로 외워두자.
+
+- [Tim sort](https://d2.naver.com/helloworld/0315536)를 default로 쓰는 곳
+  - Python, Java, Android, V8, Swift
+  - 그냥 Tim sort가 정ㅋ벅ㅋ 했다
 
 ## Command
 
@@ -18,8 +21,6 @@ rm -rf ./sort/classes
 ```
 
 ## Compare
-
-[Naver D2](https://d2.naver.com/helloworld/0315536)
 
 | Name            |   Best   | Average  |  Worst   | Memory |   Stable |
 | --------------- | :------: | :------: | :------: | -----: | -------: |
