@@ -1,6 +1,6 @@
 # 정렬
 
-공부를 해 보았는데, [Quick](https://www.geeksforgeeks.org/quick-sort/) 과 [Tim sort](https://www.geeksforgeeks.org/timsort/) 가 짱이다.<br>
+공부를 해 보았는데, [Quick](https://www.geeksforgeeks.org/quick-sort/) 과 [Tim](https://www.geeksforgeeks.org/timsort/) sort 가 짱이다.<br>
 2개만 제대로 외워두자.<br>
 자바와 파이썬의 기본 정렬 알고리즘은 Tim sort 이다
 
