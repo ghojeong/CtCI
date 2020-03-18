@@ -1,5 +1,13 @@
 # 정렬
 
+공부를 해 보았는데, Quick 과 Tim sort 가 짱이다.<br>
+2개만 제대로 외워두자.
+
+- Tim Sort
+  - 자바와 파이썬의 기본 정렬 알고리즘
+  - [Naver D2](https://d2.naver.com/helloworld/0315536)
+  - [Geeks for Geeks](https://www.geeksforgeeks.org/timsort/)
+
 ## Command
 
 ```sh
@@ -15,14 +23,13 @@ rm -rf ./sort/classes
 
 ## Compare
 
-일반적으로 유명한 아래 5가지 정렬만 외워두도록 하자
-
-| Name                                     |   Best   | Average  |  Worst   | Memory | Stable |
-| ---------------------------------------- | :------: | :------: | :------: | -----: | -----: |
-| [Quick(퀵)](./code/Quick.java)           |   `n`    | `n lg n` |  `n^2`   | `lg n` |     no |
-| [Merge(병합)](./code/Merge.java)         | `n lg n` | `n lg n` | `n lg n` |    `n` |    yes |
-| [Bubble(거품)](./code/Bubble.java)       |   `n`    |  `n^2`   |  `n^2`   |    `1` |    yes |
-| [Insertion(삽입)](./code/Insertion.java) |   `n`    |  `n^2`   |  `n^2`   |    `1` |    yes |
-| [Selection(선택)](./code/Selection.java) |  `n^2`   |  `n^2`   |  `n^2`   |    `1` |     no |
+| Name            |   Best   | Average  |  Worst   | Memory |   Stable |
+| --------------- | :------: | :------: | :------: | -----: | -------: |
+| Quick(퀵)       |   `n`    | `n lg n` |  `n^2`   | `lg n` | unstable |
+| Tim(팀)         |   `n`    | `n lg n` | `n lg n` |    `n` |   stable |
+| Merge(병합)     | `n lg n` | `n lg n` | `n lg n` |    `n` |   stable |
+| Bubble(거품)    |   `n`    |  `n^2`   |  `n^2`   |    `1` |   stable |
+| Insertion(삽입) |   `n`    |  `n^2`   |  `n^2`   |    `1` |   stable |
+| Selection(선택) |  `n^2`   |  `n^2`   |  `n^2`   |    `1` |   stable |
 
 ![compare](./img/compare.png)
