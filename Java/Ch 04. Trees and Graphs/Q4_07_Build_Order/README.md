@@ -12,9 +12,9 @@ java -cp ./Java/classes Q4_07_Build_Order.DFS.Question
 java -cp ./Java/classes Q4_07_Build_Order.EdgeRemoval.Question
 ```
 
-## DFS.Question
+## Output
 
-### Question
+### DFS.Question
 
 ```txt
 g
