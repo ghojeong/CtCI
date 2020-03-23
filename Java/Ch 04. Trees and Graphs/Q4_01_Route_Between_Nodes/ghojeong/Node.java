@@ -1,10 +1,14 @@
 package Q4_01_Route_Between_Nodes.ghojeong;
 
 class Node {
+  public enum State {
+    Unvisited, Visited, Visiting;
+  }
+
   private Node adjacent[];
   public int adjacentCount;
   private String vertex;
-  public Question.State state;
+  public State state;
 
   public Node(String vertex, int adjacentLength) {
     this.vertex = vertex;

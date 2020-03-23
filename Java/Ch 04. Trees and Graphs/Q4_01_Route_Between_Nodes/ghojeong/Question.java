@@ -1,11 +1,9 @@
 package Q4_01_Route_Between_Nodes.ghojeong;
 
+import Q4_01_Route_Between_Nodes.ghojeong.Node.State;
 import java.util.LinkedList;
 
 public class Question {
-  public enum State {
-    Unvisited, Visited, Visiting;
-  }
 
   public static void main(String a[]) {
     Graph g = createNewGraph();
