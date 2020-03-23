@@ -6,9 +6,11 @@
 ## Script
 
 ```sh
-javac -Xlint -d ./Java/classes ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_01_Route_Between_Nodes/*.java
+javac -Xlint -d ./Java/classes ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_01_Route_Between_Nodes/**/*.java
 
 java -cp ./Java/classes Q4_01_Route_Between_Nodes.Question
+
+java -cp ./Java/classes Q4_01_Route_Between_Nodes.ghojeong.Question
 ```
 
 ## Output
