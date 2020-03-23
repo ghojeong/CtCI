@@ -1,21 +1,24 @@
 package Q4_01_Route_Between_Nodes.ghojeong;
 
+import java.util.Arrays;
+
 public class Node {
 
-  private Node adjacent[];
+  private Node adjacentArr[];
+  private int MAX_ADJACENT_SIZE = 3;
   public int adjacentCount;
   private String vertex;
   public State state;
 
-  public Node(String vertex, int adjacentArrLength) {
+  public Node(String vertex) {
     this.vertex = vertex;
     adjacentCount = 0;
-    adjacent = new Node[adjacentArrLength];
+    adjacentArr = new Node[MAX_ADJACENT_SIZE];
   }
 
   public void addAdjacent(Node x) {
-    if (adjacentCount < adjacent.length) {
-      this.adjacent[adjacentCount] = x;
+    if (adjacentCount < adjacentArr.length) {
+      this.adjacentArr[adjacentCount] = x;
       adjacentCount++;
     } else {
       System.out.print("No more adjacent can be added");
@@ -23,7 +26,7 @@ public class Node {
   }
 
   public Node[] getAdjacent() {
-    return adjacent;
+    return Arrays.copyOf(adjacentArr, adjacentCount);
   }
 
   public String getVertex() {

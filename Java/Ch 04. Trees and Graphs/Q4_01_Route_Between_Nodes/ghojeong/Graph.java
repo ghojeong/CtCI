@@ -3,32 +3,31 @@ package Q4_01_Route_Between_Nodes.ghojeong;
 import java.util.LinkedList;
 
 public class Graph {
-  private Node nodes[];
-  private int MAX_NODES = 6;
+  private Node nodeArr[];
+  private int MAX_NODE_SIZE = 6;
   public int count;
 
   public Graph() {
-    nodes = new Node[MAX_NODES];
+    nodeArr = new Node[MAX_NODE_SIZE];
     count = 0;
   }
 
   public void addNode(Node x) {
-    if (count < nodes.length) {
-      nodes[count] = x;
+    if (count < nodeArr.length) {
+      nodeArr[count] = x;
       count++;
     } else {
       System.out.print("Graph full");
     }
   }
 
-  public Node[] getNodes() {
-    return nodes;
+  public Node[] getNodeArr() {
+    return nodeArr;
   }
 
   public boolean search(Node start, Node end) {
-    Graph graph = this;
     LinkedList<Node> ll = new LinkedList<Node>();
-    for (Node node : graph.getNodes()) {
+    for (Node node : nodeArr) {
       node.state = State.Unvisited;
     }
     start.state = State.Visiting;

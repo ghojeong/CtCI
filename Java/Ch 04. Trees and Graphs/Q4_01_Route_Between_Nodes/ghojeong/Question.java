@@ -4,31 +4,31 @@ public class Question {
 
   private static Graph createNewGraph() {
     Graph g = new Graph();
-    Node[] nodes = new Node[6];
+    Node[] nodeArr = new Node[6];
 
-    nodes[0] = new Node("a", 3);
-    nodes[1] = new Node("b", 0);
-    nodes[2] = new Node("c", 0);
-    nodes[3] = new Node("d", 1);
-    nodes[4] = new Node("e", 1);
-    nodes[5] = new Node("f", 0);
+    nodeArr[0] = new Node("a");
+    nodeArr[1] = new Node("b");
+    nodeArr[2] = new Node("c");
+    nodeArr[3] = new Node("d");
+    nodeArr[4] = new Node("e");
+    nodeArr[5] = new Node("f");
 
-    nodes[0].addAdjacent(nodes[1]);
-    nodes[0].addAdjacent(nodes[2]);
-    nodes[0].addAdjacent(nodes[3]);
-    nodes[3].addAdjacent(nodes[4]);
-    nodes[4].addAdjacent(nodes[5]);
-    for (int i = 0; i < nodes.length; i++) {
-      g.addNode(nodes[i]);
+    nodeArr[0].addAdjacent(nodeArr[1]);
+    nodeArr[0].addAdjacent(nodeArr[2]);
+    nodeArr[0].addAdjacent(nodeArr[3]);
+    nodeArr[3].addAdjacent(nodeArr[4]);
+    nodeArr[4].addAdjacent(nodeArr[5]);
+    for (int i = 0; i < nodeArr.length; i++) {
+      g.addNode(nodeArr[i]);
     }
     return g;
   }
 
   public static void main(String a[]) {
     Graph g = createNewGraph();
-    Node[] nodes = g.getNodes();
-    Node start = nodes[3];
-    Node end = nodes[5];
+    Node[] nodeArr = g.getNodeArr();
+    Node start = nodeArr[3];
+    Node end = nodeArr[5];
     System.out.println(g.search(start, end));
   }
 }
