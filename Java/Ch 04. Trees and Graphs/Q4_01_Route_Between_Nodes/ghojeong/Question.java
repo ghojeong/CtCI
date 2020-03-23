@@ -1,64 +1,34 @@
 package Q4_01_Route_Between_Nodes.ghojeong;
 
-import Q4_01_Route_Between_Nodes.ghojeong.Node.State;
-import java.util.LinkedList;
-
 public class Question {
 
-  public static void main(String a[]) {
-    Graph g = createNewGraph();
-    Node[] n = g.getNodes();
-    Node start = n[3];
-    Node end = n[5];
-    System.out.println(search(g, start, end));
-  }
-
-  public static Graph createNewGraph() {
+  private static Graph createNewGraph() {
     Graph g = new Graph();
-    Node[] temp = new Node[6];
+    Node[] nodes = new Node[6];
 
-    temp[0] = new Node("a", 3);
-    temp[1] = new Node("b", 0);
-    temp[2] = new Node("c", 0);
-    temp[3] = new Node("d", 1);
-    temp[4] = new Node("e", 1);
-    temp[5] = new Node("f", 0);
+    nodes[0] = new Node("a", 3);
+    nodes[1] = new Node("b", 0);
+    nodes[2] = new Node("c", 0);
+    nodes[3] = new Node("d", 1);
+    nodes[4] = new Node("e", 1);
+    nodes[5] = new Node("f", 0);
 
-    temp[0].addAdjacent(temp[1]);
-    temp[0].addAdjacent(temp[2]);
-    temp[0].addAdjacent(temp[3]);
-    temp[3].addAdjacent(temp[4]);
-    temp[4].addAdjacent(temp[5]);
-    for (int i = 0; i < 6; i++) {
-      g.addNode(temp[i]);
+    nodes[0].addAdjacent(nodes[1]);
+    nodes[0].addAdjacent(nodes[2]);
+    nodes[0].addAdjacent(nodes[3]);
+    nodes[3].addAdjacent(nodes[4]);
+    nodes[4].addAdjacent(nodes[5]);
+    for (int i = 0; i < nodes.length; i++) {
+      g.addNode(nodes[i]);
     }
     return g;
   }
 
-  public static boolean search(Graph g, Node start, Node end) {
-    LinkedList<Node> q = new LinkedList<Node>();
-    for (Node u : g.getNodes()) {
-      u.state = State.Unvisited;
-    }
-    start.state = State.Visiting;
-    q.add(start);
-    Node u;
-    while (!q.isEmpty()) {
-      u = q.removeFirst();
-      if (u != null) {
-        for (Node v : u.getAdjacent()) {
-          if (v.state == State.Unvisited) {
-            if (v == end) {
-              return true;
-            } else {
-              v.state = State.Visiting;
-              q.add(v);
-            }
-          }
-        }
-        u.state = State.Visited;
-      }
-    }
-    return false;
+  public static void main(String a[]) {
+    Graph g = createNewGraph();
+    Node[] nodes = g.getNodes();
+    Node start = nodes[3];
+    Node end = nodes[5];
+    System.out.println(g.search(start, end));
   }
 }

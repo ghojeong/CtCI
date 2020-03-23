@@ -1,19 +1,16 @@
 package Q4_01_Route_Between_Nodes.ghojeong;
 
-class Node {
-  public enum State {
-    Unvisited, Visited, Visiting;
-  }
+public class Node {
 
   private Node adjacent[];
   public int adjacentCount;
   private String vertex;
   public State state;
 
-  public Node(String vertex, int adjacentLength) {
+  public Node(String vertex, int adjacentArrLength) {
     this.vertex = vertex;
     adjacentCount = 0;
-    adjacent = new Node[adjacentLength];
+    adjacent = new Node[adjacentArrLength];
   }
 
   public void addAdjacent(Node x) {
