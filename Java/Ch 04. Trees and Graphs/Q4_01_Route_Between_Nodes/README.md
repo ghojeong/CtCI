@@ -25,11 +25,22 @@ true
 
 ```txt
 BfsRoute 0->5: [0, 3, 4, 5]
+Visited History: [0, 1, 2, 3, 4]
+
 BfsRoute 2->5: null
+Visited History: [2]
+
 
 DfsRoute 0->5: [0, 3, 4, 5]
+Visited History: [0, 1, 2, 3, 4]
+
 DfsRoute 2->5: null
+Visited History: [2]
+
 
 RecDfsRoute 0->5: [0, 3, 4, 5]
+Visited History: [0, 1, 2, 3, 4]
+
 RecDfsRoute 2->5: null
+Visited History: [2]
 ```

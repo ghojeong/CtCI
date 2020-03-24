@@ -36,6 +36,6 @@ public class Question {
     System.out.println("RecDfsRoute 0->5: " + graph.searchRoute(nodeArr[0], nodeArr[5]));
     System.out.println("Visited History: " + graph.getVisitedHistory() + "\n");
     System.out.println("RecDfsRoute 2->5: " + graph.searchRoute(nodeArr[2], nodeArr[5]));
-    System.out.println("Visited History: " + graph.getVisitedHistory() + "\n\n");
+    System.out.println("Visited History: " + graph.getVisitedHistory());
   }
 }
