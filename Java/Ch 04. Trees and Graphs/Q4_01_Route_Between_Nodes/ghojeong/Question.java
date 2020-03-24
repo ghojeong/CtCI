@@ -6,12 +6,12 @@ public class Question {
 
     Node[] nodeArr = new Node[6];
 
-    nodeArr[0] = new Node("a");
-    nodeArr[1] = new Node("b");
-    nodeArr[2] = new Node("c");
-    nodeArr[3] = new Node("d");
-    nodeArr[4] = new Node("e");
-    nodeArr[5] = new Node("f");
+    nodeArr[0] = new Node("0");
+    nodeArr[1] = new Node("1");
+    nodeArr[2] = new Node("2");
+    nodeArr[3] = new Node("3");
+    nodeArr[4] = new Node("4");
+    nodeArr[5] = new Node("5");
 
     nodeArr[0].adjacentList.add(nodeArr[1]);
     nodeArr[0].adjacentList.add(nodeArr[2]);
@@ -19,9 +19,14 @@ public class Question {
     nodeArr[3].adjacentList.add(nodeArr[4]);
     nodeArr[4].adjacentList.add(nodeArr[5]);
 
-    Graph graph = new Graph(nodeArr);
-    Node start = nodeArr[3];
-    Node end = nodeArr[5];
-    System.out.println(graph.search(start, end));
+    System.out.println();
+    BfsGraph bfsGraph = new BfsGraph(nodeArr);
+    System.out.println("BfsRoute 0->5: " + bfsGraph.getRoute(nodeArr[0], nodeArr[5]));
+    System.out.println("BfsRoute 2->5: " + bfsGraph.getRoute(nodeArr[2], nodeArr[5]));
+
+    System.out.println();
+    DfsGraph dfsGraph = new DfsGraph(nodeArr);
+    System.out.println("DfsRoute 0->5: " + dfsGraph.getRoute(nodeArr[0], nodeArr[5]));
+    System.out.println("DfsRoute 2->5: " + dfsGraph.getRoute(nodeArr[2], nodeArr[5]));
   }
 }
