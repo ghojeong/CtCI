@@ -4,29 +4,39 @@ import java.util.LinkedList;
 
 public class BfsGraph {
   public LinkedList<Node> vertexList;
+  private LinkedList<Node> visitingList;
 
   public BfsGraph(LinkedList<Node> vertexList) {
     this.vertexList = vertexList;
+    this.visitingList = new LinkedList<Node>();
   };
 
   public BfsGraph(Node[] nodeArr) {
     this.vertexList = new LinkedList<Node>();
+    this.visitingList = new LinkedList<Node>();
     for (int i = 0; i < nodeArr.length; i++) {
       this.vertexList.add(nodeArr[i]);
     }
   }
 
-  public LinkedList<Node> getRoute(Node start, Node end) {
+  private void visit(Node node) {
+    visitingList.add(node);
+    node.isVisited = true;
+  }
+
+  private void reset() {
+    visitingList = new LinkedList<Node>();
     for (Node vertex : vertexList) {
       vertex.isVisited = false;
       vertex.calledBy = null;
     }
-    LinkedList<Node> visitingList = new LinkedList<Node>();
-    visitingList.add(start);
-    start.isVisited = true;
-    Node node;
+  }
+
+  public LinkedList<Node> searchRoute(Node start, Node end) {
+    reset();
+    visit(start);
     while (!visitingList.isEmpty()) {
-      node = visitingList.removeFirst();
+      Node node = visitingList.removeFirst();
       if (node == null) {
         continue;
       }
@@ -38,8 +48,7 @@ public class BfsGraph {
         if (adjacent == end) {
           return end.getRoute();
         }
-        visitingList.add(adjacent);
-        adjacent.isVisited = true;
+        visit(adjacent);
       }
     }
     return null;
