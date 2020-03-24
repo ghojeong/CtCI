@@ -15,7 +15,7 @@ public class DfsGraph extends Graph {
   private void search(Node start, Node end) {
     visit(start);
     while (!visitingList.isEmpty()) {
-      Node caller = visitingList.removeFirst();
+      Node caller = visitingList.removeLast();
       for (Node adjacent : caller.adjacentList) {
         if (adjacent.isVisited) {
           continue;
