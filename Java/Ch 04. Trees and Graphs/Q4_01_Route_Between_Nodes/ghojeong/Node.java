@@ -15,6 +15,9 @@ public class Node {
   }
 
   public LinkedList<Node> getRoute() {
+    if (caller == null) {
+      return null;
+    }
     LinkedList<Node> route = new LinkedList<Node>();
     Node itrNode = this;
     while (itrNode != null) {

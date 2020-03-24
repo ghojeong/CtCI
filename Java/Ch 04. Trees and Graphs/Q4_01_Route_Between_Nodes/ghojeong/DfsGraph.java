@@ -12,25 +12,26 @@ public class DfsGraph extends Graph {
     super(nodeArr);
   }
 
-  public LinkedList<Node> searchRoute(Node start, Node end) {
-    reset();
+  private void search(Node start, Node end) {
     visit(start);
     while (!visitingList.isEmpty()) {
       Node caller = visitingList.removeFirst();
-      if (caller == null) {
-        continue;
-      }
       for (Node adjacent : caller.adjacentList) {
         if (adjacent.isVisited) {
           continue;
         }
         adjacent.caller = caller;
         if (adjacent == end) {
-          return end.getRoute();
+          return;
         }
         visit(adjacent);
       }
     }
-    return null;
+  }
+
+  public LinkedList<Node> searchRoute(Node start, Node end) {
+    reset();
+    search(start, end);
+    return end.getRoute();
   }
 }
