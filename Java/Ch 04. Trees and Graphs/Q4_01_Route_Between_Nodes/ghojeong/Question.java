@@ -24,11 +24,9 @@ public class Question {
     System.out.println("BfsRoute 0->5: " + bfsGraph.searchRoute(nodeArr[0], nodeArr[5]));
     System.out.println("BfsRoute 2->5: " + bfsGraph.searchRoute(nodeArr[2], nodeArr[5]));
 
-    // System.out.println();
-    // DfsGraph dfsGraph = new DfsGraph(nodeArr);
-    // System.out.println("DfsRoute 0->5: " + dfsGraph.searchRoute(nodeArr[0],
-    // nodeArr[5]));
-    // System.out.println("DfsRoute 2->5: " + dfsGraph.searchRoute(nodeArr[2],
-    // nodeArr[5]));
+    System.out.println();
+    DfsGraph dfsGraph = new DfsGraph(nodeArr);
+    System.out.println("DfsRoute 0->5: " + dfsGraph.searchRoute(nodeArr[0], nodeArr[5]));
+    System.out.println("DfsRoute 2->5: " + dfsGraph.searchRoute(nodeArr[2], nodeArr[5]));
   }
 }

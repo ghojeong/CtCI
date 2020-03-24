@@ -2,13 +2,13 @@ package Q4_01_Route_Between_Nodes.ghojeong;
 
 import java.util.LinkedList;
 
-public class BfsGraph extends Graph {
+public class DfsGraph extends Graph {
 
-  public BfsGraph(LinkedList<Node> vertexList) {
+  public DfsGraph(LinkedList<Node> vertexList) {
     super(vertexList);
   };
 
-  public BfsGraph(Node[] nodeArr) {
+  public DfsGraph(Node[] nodeArr) {
     super(nodeArr);
   }
 
