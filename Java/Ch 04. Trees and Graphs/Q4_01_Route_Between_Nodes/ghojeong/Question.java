@@ -1,41 +1,31 @@
 package Q4_01_Route_Between_Nodes.ghojeong;
 
 public class Question {
-
   public static void main(String a[]) {
-
     Graph graph;
-    Node[] nodeArr = new Node[6];
-
-    nodeArr[0] = new Node("0");
-    nodeArr[1] = new Node("1");
-    nodeArr[2] = new Node("2");
-    nodeArr[3] = new Node("3");
-    nodeArr[4] = new Node("4");
-    nodeArr[5] = new Node("5");
-
-    nodeArr[0].adjacentList.add(nodeArr[1]);
-    nodeArr[0].adjacentList.add(nodeArr[2]);
-    nodeArr[0].adjacentList.add(nodeArr[3]);
-    nodeArr[3].adjacentList.add(nodeArr[4]);
-    nodeArr[4].adjacentList.add(nodeArr[5]);
+    Node[] nodeArr = new Node[15]; // 15 = 2^4 -1
+    for (int i = 0; i < nodeArr.length; i++) {
+      nodeArr[i] = new Node("" + i);
+    }
+    for (int i = 1; i < nodeArr.length; i++) {
+      nodeArr[(int) Math.floor((i - 1) / 2)].adjacentList.add(nodeArr[i]);
+    }
 
     graph = new BfsGraph(nodeArr);
-    System.out.println("\nBfsRoute 0->5: " + graph.searchRoute(nodeArr[0], nodeArr[5]));
-    System.out.println("Visited History: " + graph.getVisitedHistory() + "\n");
-    System.out.println("BfsRoute 2->5: " + graph.searchRoute(nodeArr[2], nodeArr[5]));
-    System.out.println("Visited History: " + graph.getVisitedHistory() + "\n\n");
+    printRoute(graph, nodeArr[0], nodeArr[10], "\nBfsRoute 0->10");
+    printRoute(graph, nodeArr[1], nodeArr[2], "BfsRoute 1->2");
 
     graph = new DfsGraph(nodeArr);
-    System.out.println("DfsRoute 0->5: " + graph.searchRoute(nodeArr[0], nodeArr[5]));
-    System.out.println("Visited History: " + graph.getVisitedHistory() + "\n");
-    System.out.println("DfsRoute 2->5: " + graph.searchRoute(nodeArr[2], nodeArr[5]));
-    System.out.println("Visited History: " + graph.getVisitedHistory() + "\n\n");
+    printRoute(graph, nodeArr[0], nodeArr[10], "\nDfsRoute 0->10");
+    printRoute(graph, nodeArr[1], nodeArr[2], "DfsRoute 1->2");
 
     graph = new RecDfsGraph(nodeArr);
-    System.out.println("RecDfsRoute 0->5: " + graph.searchRoute(nodeArr[0], nodeArr[5]));
-    System.out.println("Visited History: " + graph.getVisitedHistory() + "\n");
-    System.out.println("RecDfsRoute 2->5: " + graph.searchRoute(nodeArr[2], nodeArr[5]));
+    printRoute(graph, nodeArr[0], nodeArr[10], "\nRecDfsRoute 0->10");
+    printRoute(graph, nodeArr[1], nodeArr[2], "RecDfsRoute 1->2");
+  }
+
+  public static void printRoute(Graph graph, Node start, Node end, String tag) {
+    System.out.println(tag + ": " + graph.searchRoute(start, end));
     System.out.println("Visited History: " + graph.getVisitedHistory());
   }
 }

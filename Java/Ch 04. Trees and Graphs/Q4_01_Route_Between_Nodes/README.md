@@ -23,24 +23,28 @@ true
 
 ### ghojeong.Question
 
+#### 그래프 모양(Complete Binary Tree)
+
 ```txt
-BfsRoute 0->5: [0, 3, 4, 5]
-Visited History: [0, 1, 2, 3, 4]
+          0
+    1           2
+ 3    4      5      6
+7 8  9 10  11 12  13 14
+```
 
-BfsRoute 2->5: null
-Visited History: [2]
+```txt
+BfsRoute 0->10: [0, 1, 4, 10]
+Visited History: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+BfsRoute 1->2: null
+Visited History: [1, 3, 4, 7, 8, 9, 10]
 
+DfsRoute 0->10: [0, 1, 4, 10]
+Visited History: [0, 1, 2, 5, 6, 13, 14, 11, 12, 3, 4, 9]
+DfsRoute 1->2: null
+Visited History: [1, 3, 4, 9, 10, 7, 8]
 
-DfsRoute 0->5: [0, 3, 4, 5]
-Visited History: [0, 1, 2, 3, 4]
-
-DfsRoute 2->5: null
-Visited History: [2]
-
-
-RecDfsRoute 0->5: [0, 3, 4, 5]
-Visited History: [0, 1, 2, 3, 4]
-
-RecDfsRoute 2->5: null
-Visited History: [2]
+RecDfsRoute 0->10: [0, 1, 4, 10]
+Visited History: [0, 1, 3, 7, 8, 4, 9, 2, 5, 11, 12, 6, 13, 14]
+RecDfsRoute 1->2: null
+Visited History: [1, 3, 7, 8, 4, 9, 10]
 ```
