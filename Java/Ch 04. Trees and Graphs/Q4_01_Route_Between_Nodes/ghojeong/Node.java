@@ -6,12 +6,16 @@ public class Node {
   public String value;
   public boolean isVisited;
   public LinkedList<Node> adjacentList;
-  public Node caller;
+  private Node caller;
 
   public Node(String value) {
     this.value = value;
     this.isVisited = false;
     adjacentList = new LinkedList<Node>();
+  }
+
+  public void setCaller(Node node) {
+    this.caller = node;
   }
 
   public LinkedList<Node> getRoute() {

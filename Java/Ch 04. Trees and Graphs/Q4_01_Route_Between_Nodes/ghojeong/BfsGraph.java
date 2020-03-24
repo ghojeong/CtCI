@@ -20,7 +20,7 @@ public class BfsGraph extends Graph {
         if (adjacent.isVisited) {
           continue;
         }
-        adjacent.caller = caller;
+        adjacent.setCaller(caller);
         if (adjacent == end) {
           return;
         }

@@ -31,7 +31,7 @@ public abstract class Graph {
     visitedList = new LinkedList<Node>();
     for (Node vertex : vertexList) {
       vertex.isVisited = false;
-      vertex.caller = null;
+      vertex.setCaller(null);
     }
   }
 
