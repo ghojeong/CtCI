@@ -18,35 +18,28 @@ public class BfsGraph {
 
   public LinkedList<Node> getRoute(Node start, Node end) {
     for (Node vertex : vertexList) {
-      vertex.state = State.Unvisited;
+      vertex.isVisited = false;
       vertex.calledBy = null;
     }
     LinkedList<Node> visitingList = new LinkedList<Node>();
-    start.state = State.Visiting;
     visitingList.add(start);
+    start.isVisited = true;
     Node node;
     while (!visitingList.isEmpty()) {
       node = visitingList.removeFirst();
-      node.state = State.Visited;
       if (node == null) {
         continue;
       }
       for (Node adjacent : node.adjacentList) {
-        if (adjacent.state != State.Unvisited) {
+        if (adjacent.isVisited) {
           continue;
         }
         adjacent.calledBy = node;
         if (adjacent == end) {
-          LinkedList<Node> route = new LinkedList<Node>();
-          Node itrNode = end;
-          while (itrNode != null) {
-            route.addFirst(itrNode);
-            itrNode = itrNode.calledBy;
-          }
-          return route;
+          return end.getRoute();
         }
-        adjacent.state = State.Visiting;
         visitingList.add(adjacent);
+        adjacent.isVisited = true;
       }
     }
     return null;
