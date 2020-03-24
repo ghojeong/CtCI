@@ -20,3 +20,16 @@ java -cp ./Java/classes Q4_01_Route_Between_Nodes.ghojeong.Question
 ```txt
 true
 ```
+
+### ghojeong.Question
+
+```txt
+BfsRoute 0->5: [0, 3, 4, 5]
+BfsRoute 2->5: null
+
+DfsRoute 0->5: [0, 3, 4, 5]
+DfsRoute 2->5: null
+
+RecDfsRoute 0->5: [0, 3, 4, 5]
+RecDfsRoute 2->5: null
+```
