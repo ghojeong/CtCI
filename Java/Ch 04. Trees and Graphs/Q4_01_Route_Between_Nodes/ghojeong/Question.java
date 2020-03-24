@@ -20,13 +20,18 @@ public class Question {
     nodeArr[4].adjacentList.add(nodeArr[5]);
 
     System.out.println();
-    BfsGraph bfsGraph = new BfsGraph(nodeArr);
+    Graph bfsGraph = new BfsGraph(nodeArr);
     System.out.println("BfsRoute 0->5: " + bfsGraph.searchRoute(nodeArr[0], nodeArr[5]));
     System.out.println("BfsRoute 2->5: " + bfsGraph.searchRoute(nodeArr[2], nodeArr[5]));
 
     System.out.println();
-    DfsGraph dfsGraph = new DfsGraph(nodeArr);
+    Graph dfsGraph = new DfsGraph(nodeArr);
     System.out.println("DfsRoute 0->5: " + dfsGraph.searchRoute(nodeArr[0], nodeArr[5]));
     System.out.println("DfsRoute 2->5: " + dfsGraph.searchRoute(nodeArr[2], nodeArr[5]));
+
+    System.out.println();
+    Graph recDfsGraph = new RecDfsGraph(nodeArr);
+    System.out.println("RecDfsRoute 0->5: " + recDfsGraph.searchRoute(nodeArr[0], nodeArr[5]));
+    System.out.println("RecDfsRoute 2->5: " + recDfsGraph.searchRoute(nodeArr[2], nodeArr[5]));
   }
 }

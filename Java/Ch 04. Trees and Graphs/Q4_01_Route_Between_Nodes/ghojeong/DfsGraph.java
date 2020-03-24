@@ -13,9 +13,6 @@ public class DfsGraph extends Graph {
   }
 
   private void search(Node start, Node end) {
-    if (start == null) {
-      return;
-    }
     visit(start);
     while (!visitingList.isEmpty()) {
       Node caller = visitingList.removeFirst();
@@ -27,7 +24,7 @@ public class DfsGraph extends Graph {
         if (adjacent == end) {
           return;
         }
-        search(adjacent, end);
+        visit(adjacent);
       }
     }
   }
