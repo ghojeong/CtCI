@@ -28,7 +28,7 @@ public abstract class Graph {
     visitingList = new LinkedList<Node>();
     for (Node vertex : vertexList) {
       vertex.isVisited = false;
-      vertex.calledBy = null;
+      vertex.caller = null;
     }
   }
 

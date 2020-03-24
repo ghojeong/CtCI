@@ -6,7 +6,7 @@ public class Node {
   public String value;
   public boolean isVisited;
   public LinkedList<Node> adjacentList;
-  public Node calledBy;
+  public Node caller;
 
   public Node(String value) {
     this.value = value;
@@ -19,7 +19,7 @@ public class Node {
     Node itrNode = this;
     while (itrNode != null) {
       route.addFirst(itrNode);
-      itrNode = itrNode.calledBy;
+      itrNode = itrNode.caller;
     }
     return route;
   }

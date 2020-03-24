@@ -24,7 +24,7 @@ public class BfsGraph extends Graph {
         if (adjacent.isVisited) {
           continue;
         }
-        adjacent.calledBy = node;
+        adjacent.caller = node;
         if (adjacent == end) {
           return end.getRoute();
         }
