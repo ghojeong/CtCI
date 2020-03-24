@@ -5,6 +5,7 @@ import java.util.LinkedList;
 public abstract class Graph {
   protected LinkedList<Node> vertexList;
   protected LinkedList<Node> visitingList;
+  private LinkedList<Node> visitedList;
 
   protected Graph(LinkedList<Node> vertexList) {
     this.vertexList = vertexList;
@@ -21,16 +22,22 @@ public abstract class Graph {
 
   protected void visit(Node node) {
     visitingList.add(node);
+    visitedList.add(node);
     node.isVisited = true;
   }
 
   protected void reset() {
     visitingList = new LinkedList<Node>();
+    visitedList = new LinkedList<Node>();
     for (Node vertex : vertexList) {
       vertex.isVisited = false;
       vertex.caller = null;
     }
   }
+
+  public LinkedList<Node> getVisitedHistory() {
+    return visitedList;
+  };
 
   public abstract LinkedList<Node> searchRoute(Node start, Node end);
 }
