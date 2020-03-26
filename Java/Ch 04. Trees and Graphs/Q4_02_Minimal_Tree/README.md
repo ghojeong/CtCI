@@ -9,6 +9,10 @@
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_02_Minimal_Tree/*.java
 
 java -cp ./Java/classes Q4_02_Minimal_Tree.Question
+# Jeon compile
+javac -d ./Java/classes ./Java/CtCILibrary/*/*.java ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_02_Minimal_Tree/*.java
+# Jeon run
+java -cp ./Java/classes Q4_02_Minimal_Tree.QuestionJeon 
 ```
 
 ## Output
