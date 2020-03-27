@@ -12,6 +12,13 @@ java -cp ./Java/classes Q4_04_Check_Balanced.QuestionBrute
 java -cp ./Java/classes Q4_04_Check_Balanced.QuestionImproved
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_04_Check_Balanced/ghojeong/*.java
+
+java -cp ./Java/classes Q4_04_Check_Balanced.ghojeong.QuestionBrute
+java -cp ./Java/classes Q4_04_Check_Balanced.ghojeong.QuestionImproved
+```
+
 ## Output
 
 ### QuestionBrute
