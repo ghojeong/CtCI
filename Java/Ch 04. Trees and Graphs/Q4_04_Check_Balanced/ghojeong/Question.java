@@ -8,10 +8,10 @@ public class Question {
     TreeNode bbtRoot = TreeFactory.getBBT(20);
     TreeNode ubtRoot = TreeFactory.getUBT(20);
 
-    CheckBalanced checkBalanced = new CheckBalanced();
-    System.out.println("Is balanced? " + checkBalanced.isBalanced(bbtRoot));
+    CheckBalanced bfs = new BFS();
+    System.out.println("Is balanced? " + bfs.isBalanced(bbtRoot));
     System.out.println("\n");
-    System.out.println("Is balanced? " + checkBalanced.isBalanced(ubtRoot));
+    System.out.println("Is balanced? " + bfs.isBalanced(ubtRoot));
   }
 
 }
