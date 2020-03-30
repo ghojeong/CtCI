@@ -31,6 +31,10 @@ public class DFS implements CheckBalanced {
   public boolean isBalanced(TreeNode root) {
     initialize();
     recursiveFunc(root, 0);
+
+    // HACK: side effect, 필요없는 코드
+    System.out.println("maxDepth:" + maxDepth + ", minDepth:" + minDepth);
+
     return maxDepth - minDepth < 2;
   }
 }
