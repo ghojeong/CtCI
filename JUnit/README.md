@@ -2,7 +2,7 @@
 
 [JUnit4 공식문서](https://github.com/junit-team/junit4/wiki/Getting-started)
 
-## script
+## Command
 
 ```sh
 cd ./JUnit

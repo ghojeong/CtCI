@@ -7,7 +7,7 @@
 
 [List 인터페이스의 구현체 비교](https://blog.naver.com/PostView.nhn?blogId=heartflow89&logNo=220991199432&redirect=Dlog&widgetTypeCall=true&directAccess=false)
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/*.java

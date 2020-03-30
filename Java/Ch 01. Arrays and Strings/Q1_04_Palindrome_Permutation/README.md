@@ -3,7 +3,7 @@
 - 문제 페이지: 103
 - 풀이 페이지: 207
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_04_Palindrome_Permutation/*.java

@@ -3,7 +3,7 @@
 - 문제 페이지: 102
 - 풀이 페이지: 205
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_02_Check_Permutation/*.java

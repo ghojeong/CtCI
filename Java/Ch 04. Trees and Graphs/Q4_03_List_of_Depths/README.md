@@ -3,7 +3,7 @@
 - 문제 페이지: 121
 - 풀이 페이지: 255
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_03_List_of_Depths/*.java

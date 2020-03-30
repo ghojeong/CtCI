@@ -3,7 +3,7 @@
 - 문제 페이지: 111
 - 풀이 페이지: 248
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 03.\ Stacks\ and\ Queues/Q3_04_Queue_via_Stacks/*.java

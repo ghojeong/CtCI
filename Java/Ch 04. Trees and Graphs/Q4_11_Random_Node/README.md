@@ -3,7 +3,7 @@
 - 문제 페이지: 123
 - 풀이 페이지: 280
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_11_Random_Node/*.java

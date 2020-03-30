@@ -3,7 +3,7 @@
 - 문제 페이지: 106
 - 풀이 페이지: 221
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 02.\ Linked\ Lists/Q2_02_Return_Kth_To_Last/*.java

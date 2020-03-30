@@ -3,7 +3,7 @@
 - 문제 페이지: 121
 - 풀이 페이지: 253
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_01_Route_Between_Nodes/**/*.java

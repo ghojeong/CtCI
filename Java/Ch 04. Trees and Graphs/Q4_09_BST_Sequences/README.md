@@ -3,7 +3,7 @@
 - 문제 페이지: 122
 - 풀이 페이지: 274
 
-## Script
+## Command
 
 ```sh
 javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_09_BST_Sequences/*.java
