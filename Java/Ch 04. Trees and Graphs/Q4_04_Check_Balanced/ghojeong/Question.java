@@ -9,9 +9,12 @@ public class Question {
     TreeNode ubtRoot = TreeFactory.getUBT(20);
 
     CheckBalanced bfs = new BFS();
-    System.out.println("Is balanced? " + bfs.isBalanced(bbtRoot));
+    CheckBalanced dfs = new DFS();
+    System.out.println("BFS Is balanced? " + bfs.isBalanced(bbtRoot));
+    System.out.println("DFS Is balanced? " + dfs.isBalanced(bbtRoot));
     System.out.println("\n");
-    System.out.println("Is balanced? " + bfs.isBalanced(ubtRoot));
+    System.out.println("BFS Is balanced? " + bfs.isBalanced(ubtRoot));
+    System.out.println("DFS Is balanced? " + dfs.isBalanced(ubtRoot));
   }
 
 }
