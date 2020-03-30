@@ -1,6 +1,7 @@
 package Q4_04_Check_Balanced.ghojeong;
 
 import java.util.LinkedList;
+import java.util.ArrayList;
 
 public class CheckBalanced {
 
@@ -16,17 +17,19 @@ public class CheckBalanced {
     this.childList = new LinkedList<TreeNode>();
   }
 
-  public boolean isBalanced(TreeNode root) {
+  public ArrayList<LinkedList<TreeNode>> getListOfDepths(TreeNode root) {
     initialize();
 
+    ArrayList<LinkedList<TreeNode>> listOfDepths = new ArrayList<LinkedList<TreeNode>>();
+
     visitingList.add(root);
-    System.out.println("(depth:0)  " + visitingList); // HACK: side effect, 필요없는 코드
+    listOfDepths.add(new LinkedList<TreeNode>(visitingList));
     while (!visitingList.isEmpty() || !childList.isEmpty()) {
       if (visitingList.isEmpty()) {
         visitingList = childList;
         childList = new LinkedList<TreeNode>();
         depth++;
-        System.out.println("(depth:" + depth + ")  " + visitingList); // HACK: side effect, 필요없는 코드
+        listOfDepths.add(new LinkedList<TreeNode>(visitingList));
       }
       TreeNode node = visitingList.remove();
       if (node.left == null && node.right == null && minDepth == 0) {
@@ -38,6 +41,17 @@ public class CheckBalanced {
       if (node.right != null) {
         childList.add(node.right);
       }
+    }
+
+    return listOfDepths;
+  }
+
+  public boolean isBalanced(TreeNode root) {
+    ArrayList<LinkedList<TreeNode>> listOfDepths = getListOfDepths(root);
+
+    // HACK: side effect, 필요없는 코드
+    for (int depth = 0; depth < listOfDepths.size(); depth++) {
+      System.out.println("(depth:" + depth + ")  " + listOfDepths.get(depth));
     }
 
     return depth - minDepth < 2;
