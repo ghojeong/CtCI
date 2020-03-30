@@ -1,6 +1,10 @@
+# Created by https://www.gitignore.io/api/java
+# Edit at https://www.gitignore.io/?templates=java
+
+### Java ###
 # Compiled class file
 *.class
-**/classes/*
+**/classes/**/*
 
 # Log file
 *.log
@@ -23,7 +27,4 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-# Exception
-
-!Junit/junit-4.13.jar
-!Junit/hamcrest-core-1.3.jar
+# End of https://www.gitignore.io/api/java
