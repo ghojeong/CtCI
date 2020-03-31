@@ -1,6 +1,6 @@
 package Q4_04_Check_Balanced.ghojeong;
 
-public class DFS implements CheckBalanced {
+public class DfsCheckedBalanced implements CheckBalanced {
   private int maxDepth;
   private int minDepth;
 

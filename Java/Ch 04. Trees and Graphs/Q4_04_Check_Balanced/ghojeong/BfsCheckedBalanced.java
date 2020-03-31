@@ -3,7 +3,7 @@ package Q4_04_Check_Balanced.ghojeong;
 import java.util.LinkedList;
 import java.util.ArrayList;
 
-public class BFS implements CheckBalanced {
+public class BfsCheckedBalanced implements CheckBalanced {
 
   private int depth;
   private int minDepth;

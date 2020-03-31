@@ -8,8 +8,8 @@ public class Question {
     TreeNode bbtRoot = TreeFactory.getBBT(20);
     TreeNode ubtRoot = TreeFactory.getUBT(20);
 
-    CheckBalanced bfs = new BFS();
-    CheckBalanced dfs = new DFS();
+    CheckBalanced bfs = new BfsCheckedBalanced();
+    CheckBalanced dfs = new DfsCheckedBalanced();
     System.out.println("BFS Is balanced? " + bfs.isBalanced(bbtRoot));
     System.out.println("DFS Is balanced? " + dfs.isBalanced(bbtRoot));
     System.out.println("\n");
