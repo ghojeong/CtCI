@@ -1,11 +1,11 @@
-package Q3_01_Three_in_One;
+package Q3_01_Three_in_One.ghojeong;
 
 import java.util.Arrays;
 
-public class QuestionGhoB {
+public class QuestionB {
 
   public static void main(String[] args) throws Exception {
-    GhoMultiStack stacks = new GhoMultiStack(3, 4);
+    MultiStack stacks = new MultiStack(3, 4);
 
     System.out.println(stacks);
 

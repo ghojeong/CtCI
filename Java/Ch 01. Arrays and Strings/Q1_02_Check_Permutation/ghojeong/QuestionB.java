@@ -1,6 +1,6 @@
-package Q1_02_Check_Permutation;
+package Q1_02_Check_Permutation.ghojeong;
 
-public class QuestionGhoB {
+public class QuestionB {
   public static boolean permutation(String s, String t) {
     if (s.length() != t.length()) {
       return false;

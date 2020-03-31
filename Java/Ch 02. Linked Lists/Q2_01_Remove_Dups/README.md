@@ -20,6 +20,12 @@ java -cp ./Java/classes Q2_01_Remove_Dups.Tester
 java -cp ./Java/classes Q2_01_Remove_Dups.QuestionGho
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 02.\ Linked\ Lists/Q2_01_Remove_Dups/ghojeong/*.java
+
+java -cp ./Java/classes Q2_01_Remove_Dups.ghojeong.Question
+```
+
 ## Output
 
 ### QuestionA

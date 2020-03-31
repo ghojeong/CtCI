@@ -1,8 +1,8 @@
-package Q2_01_Remove_Dups;
+package Q2_01_Remove_Dups.ghojeong;
 
 import java.util.HashSet;
 
-public class GhoLinkedList<T> {
+public class LinkedList<T> {
   private class Node<T> {
     private T value;
     private Node<T> next;
@@ -16,7 +16,7 @@ public class GhoLinkedList<T> {
   public Node<T> tail;
 
   public void add(T value) {
-    Node<T> node = new Node(value);
+    Node<T> node = new Node<T>(value);
     if (head == null) {
       head = node;
       tail = node;

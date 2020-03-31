@@ -1,9 +1,9 @@
-package Q3_01_Three_in_One;
+package Q3_01_Three_in_One.ghojeong;
 
-public class QuestionGhoA {
+public class QuestionA {
 
   public static void main(String[] args) throws Exception {
-    GhoFixedMultiStack stacks = new GhoFixedMultiStack(4);
+    FixedMultiStack stacks = new FixedMultiStack(4);
     System.out.println(stacks);
     stacks.push(0, 10);
     System.out.println(stacks);

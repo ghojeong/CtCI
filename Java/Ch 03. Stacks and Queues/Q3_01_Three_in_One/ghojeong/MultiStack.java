@@ -1,9 +1,9 @@
-package Q3_01_Three_in_One;
+package Q3_01_Three_in_One.ghojeong;
 
 import java.util.EmptyStackException;
 import java.util.Arrays;
 
-public class GhoMultiStack {
+public class MultiStack {
   /*
    * StackInfo is a simple class that holds a set of data about each stack. It
    * does not hold the actual items in the stack. We could have done this with
@@ -54,7 +54,7 @@ public class GhoMultiStack {
   private StackInfo[] info;
   private int[] values;
 
-  public GhoMultiStack(int numberOfStacks, int defaultSize) {
+  public MultiStack(int numberOfStacks, int defaultSize) {
     /* Create metadata for all the stacks. */
     info = new StackInfo[numberOfStacks];
     for (int i = 0; i < numberOfStacks; i++) {

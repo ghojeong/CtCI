@@ -1,17 +1,17 @@
-package Q3_01_Three_in_One;
+package Q3_01_Three_in_One.ghojeong;
 
 import java.util.Arrays;
 import java.util.ArrayList;
 
-public class GhoMultiStacks<T> {
+public class MultiStacks<T> {
 
   private T[] array;
   private int lastArrIdx = 0; // array에 element가 들어가있는 마지막 인덱스
 
   // stack 에는 array의 idx를 저장한다.
-  private ArrayList<GhoStack<Integer>> stacks;
+  private ArrayList<Stack<Integer>> stacks;
 
-  public GhoMultiStacks(int numOfStacks, T[] array) {
+  public MultiStacks(int numOfStacks, T[] array) {
     // TODO:
     this.array = array;
     if (numOfStacks < 1) {
@@ -19,7 +19,7 @@ public class GhoMultiStacks<T> {
     }
     stacks = new ArrayList<>(numOfStacks);
     for (int i = 0; i < numOfStacks; i++) {
-      stacks.add(new GhoStack<Integer>());
+      stacks.add(new Stack<Integer>());
     }
   }
 

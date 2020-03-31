@@ -1,15 +1,15 @@
-package Q3_01_Three_in_One;
+package Q3_01_Three_in_One.ghojeong;
 
 import java.util.Arrays;
 
-public class QuestionGho {
+public class Question {
 
   public static void main(String[] args) throws Exception {
 
     int numOfStacks = 3;
     Integer[] array = new Integer[numOfStacks * 4];
 
-    GhoMultiStacks<Integer> stacks = new GhoMultiStacks<Integer>(numOfStacks, array);
+    MultiStacks<Integer> stacks = new MultiStacks<Integer>(numOfStacks, array);
 
     System.out.println(stacks);
     System.out.println("ArrayM: " + Arrays.toString(array));

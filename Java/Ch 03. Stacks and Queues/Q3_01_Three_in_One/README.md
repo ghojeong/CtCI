@@ -11,8 +11,13 @@ javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionA
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionB
 
-java -cp ./Java/classes Q3_01_Three_in_One.QuestionGho
 java -cp ./Java/classes Q3_01_Three_in_One.QuestionJvhe
+```
+
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 03.\ Stacks\ and\ Queues/Q3_01_Three_in_One/ghojeong/*.java
+
+java -cp ./Java/classes Q3_01_Three_in_One.ghojeong.Question
 ```
 
 ## Output

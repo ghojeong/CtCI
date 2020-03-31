@@ -10,9 +10,13 @@ javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_02_Check_
 
 java -cp ./Java/classes Q1_02_Check_Permutation.QuestionA
 java -cp ./Java/classes Q1_02_Check_Permutation.QuestionB
+```
 
-java -cp ./Java/classes Q1_02_Check_Permutation.QuestionGhoA
-java -cp ./Java/classes Q1_02_Check_Permutation.QuestionGhoB
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_02_Check_Permutation/ghojeong/*.java
+
+java -cp ./Java/classes Q1_02_Check_Permutation.ghojeong.QuestionA
+java -cp ./Java/classes Q1_02_Check_Permutation.ghojeong.QuestionB
 ```
 
 ## Output

@@ -1,9 +1,9 @@
-package Q3_01_Three_in_One;
+package Q3_01_Three_in_One.ghojeong;
 
 import java.util.EmptyStackException;
 import java.util.ArrayList;
 
-public class GhoStack<T> {
+public class Stack<T> {
   private static class Node<T> {
     // TODO:
     private T value;
