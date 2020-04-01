@@ -1,41 +1,46 @@
 package Q4_04_Check_Balanced.ghojeong;
 
 import java.util.LinkedList;
+import java.util.HashMap;
 
 public class Dfs2CheckBalanced implements CheckBalanced {
   private int maxDepth;
   private int minDepth;
   private LinkedList<TreeNode> visitingList;
+  private HashMap<TreeNode, Integer> nodeToDepth;
 
   private void initialize() {
     this.maxDepth = 0;
     this.minDepth = 0;
     this.visitingList = new LinkedList<TreeNode>();
+    this.nodeToDepth = new HashMap<TreeNode, Integer>();
   }
 
   private void checkBalance(TreeNode root) {
     initialize();
-    int depth = 0;
+    nodeToDepth.put(root, 0);
     visitingList.add(root);
+
     while (!visitingList.isEmpty()) {
-      depth++;
-      int size = visitingList.size();
-      for (int width = 0; width < size; width++) {
-        TreeNode node = visitingList.removeFirst();
-        if (node.left == null && node.right == null) {
-          if (minDepth == 0 || minDepth > depth) {
-            minDepth = depth;
-          }
-          if (maxDepth < depth) {
-            maxDepth = depth;
-          }
+      TreeNode node = visitingList.removeLast();
+      int depth = nodeToDepth.get(node);
+
+      if (node.left == null && node.right == null) {
+        if (minDepth == 0 || minDepth > depth) {
+          minDepth = depth;
         }
-        if (node.left != null) {
-          visitingList.add(node.left);
+        if (maxDepth < depth) {
+          maxDepth = depth;
         }
-        if (node.right != null) {
-          visitingList.add(node.right);
-        }
+      }
+
+      if (node.left != null) {
+        nodeToDepth.put(node.left, depth + 1);
+        visitingList.add(node.left);
+      }
+      if (node.right != null) {
+        nodeToDepth.put(node.right, depth + 1);
+        visitingList.add(node.right);
       }
     }
   }
