@@ -1,10 +1,8 @@
 package Q4_04_Check_Balanced.ghojeong;
 
 import java.util.LinkedList;
-import java.util.ArrayList;
 
-public class Bfs2CheckedBalanced implements CheckBalanced {
-
+public class Dfs2CheckBalanced implements CheckBalanced {
   private int maxDepth;
   private int minDepth;
   private LinkedList<TreeNode> visitingList;
@@ -15,15 +13,11 @@ public class Bfs2CheckedBalanced implements CheckBalanced {
     this.visitingList = new LinkedList<TreeNode>();
   }
 
-  public ArrayList<LinkedList<TreeNode>> getListOfDepths(TreeNode root) {
+  private void checkBalance(TreeNode root) {
     initialize();
-
     int depth = 0;
-    ArrayList<LinkedList<TreeNode>> listOfDepths = new ArrayList<LinkedList<TreeNode>>();
-
     visitingList.add(root);
     while (!visitingList.isEmpty()) {
-      listOfDepths.add(new LinkedList<TreeNode>(visitingList));
       depth++;
       int size = visitingList.size();
       for (int width = 0; width < size; width++) {
@@ -44,17 +38,13 @@ public class Bfs2CheckedBalanced implements CheckBalanced {
         }
       }
     }
-
-    return listOfDepths;
   }
 
   public boolean isBalanced(TreeNode root) {
-    ArrayList<LinkedList<TreeNode>> listOfDepths = getListOfDepths(root);
+    initialize();
+    checkBalance(root);
 
-    // HACK: side effect, 필요없는 코드
-    for (int depth = 0; depth < listOfDepths.size(); depth++) {
-      System.out.println("(depth:" + depth + ")  " + listOfDepths.get(depth));
-    }
+    System.out.println("\nmaxDepth:" + maxDepth + ", minDepth:" + minDepth);
 
     return maxDepth - minDepth < 2;
   }

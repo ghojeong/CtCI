@@ -1,6 +1,6 @@
 package Q4_04_Check_Balanced.ghojeong;
 
-public class DfsCheckedBalanced implements CheckBalanced {
+public class DfsCheckBalanced implements CheckBalanced {
   private int maxDepth;
   private int minDepth;
 
@@ -32,8 +32,7 @@ public class DfsCheckedBalanced implements CheckBalanced {
     initialize();
     recursiveFunc(root, 0);
 
-    // HACK: side effect, 필요없는 코드
-    System.out.println("maxDepth:" + maxDepth + ", minDepth:" + minDepth);
+    System.out.println("\nmaxDepth:" + maxDepth + ", minDepth:" + minDepth);
 
     return maxDepth - minDepth < 2;
   }
