@@ -46,7 +46,6 @@ public class Dfs2CheckBalanced implements CheckBalanced {
   }
 
   public boolean isBalanced(TreeNode root) {
-    initialize();
     checkBalance(root);
 
     System.out.println("\nmaxDepth:" + maxDepth + ", minDepth:" + minDepth);
