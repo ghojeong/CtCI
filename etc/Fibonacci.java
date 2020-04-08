@@ -6,7 +6,7 @@ public class Fibonacci {
     if (n < 1) {
       return 0;
     }
-    if (n == 1) {
+    if (n < 3) {
       return 1;
     }
     return fibRec(n - 1) + fibRec(n - 2);
