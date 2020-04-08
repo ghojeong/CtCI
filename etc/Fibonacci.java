@@ -1,7 +1,7 @@
 public class Fibonacci {
 
-  // Temporal Complexity: O(n^2)
-  // Spatial Complexity: O(n^2)
+  // Temporal Complexity: O(2^n)
+  // Spatial Complexity: O(2^n)
   public static int fibRec(int n) {
     if (n < 1) {
       return 0;
