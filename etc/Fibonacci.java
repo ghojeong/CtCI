@@ -41,8 +41,8 @@ public class Fibonacci {
     if (n < 3) {
       return 1;
     }
-    int f_2 = 0, f_1 = 1, f = 1;
-    for (int i = 2; i <= n; i++) {
+    int f_2 = 1, f_1 = 1, f = 2;
+    for (int i = 3; i <= n; i++) {
       f = f_1 + f_2;
       f_2 = f_1;
       f_1 = f;
