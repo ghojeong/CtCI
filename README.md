@@ -29,3 +29,11 @@ java -cp ./Java/classes ${packageName}.${className}
 // 컴파일된 class 삭제
 rm -rf ./Java/classes && rm ./JUnit/*.class
 ```
+
+## Tip
+
+풀이순서
+
+1. 메모장에 어떻게 구현할 건지 아이디어를 그린다.
+2. 빅오를 계산한다.
+3. 마지막에 코드를 구현한다.
