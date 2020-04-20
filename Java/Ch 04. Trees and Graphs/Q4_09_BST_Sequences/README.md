@@ -11,6 +11,12 @@ javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 
 java -cp ./Java/classes Q4_09_BST_Sequences.Question
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_09_BST_Sequences/ghojeong/*.java
+
+java -cp ./Java/classes Q4_09_BST_Sequences.ghojeong.Question
+```
+
 ## Output
 
 ### Question
