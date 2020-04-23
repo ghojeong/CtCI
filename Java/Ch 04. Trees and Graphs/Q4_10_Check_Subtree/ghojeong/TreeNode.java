@@ -34,7 +34,6 @@ public class TreeNode {
 
 	private void buildOrderStr(TreeNode node, StringBuilder sb) {
 		if (node == null) {
-			sb.append("X");
 			return;
 		}
 		sb.append(node.data);
@@ -43,12 +42,12 @@ public class TreeNode {
 	}
 
 	public boolean containsTree(TreeNode node) {
-		StringBuilder str1 = new StringBuilder();
-		StringBuilder str2 = new StringBuilder();
+		StringBuilder thisBuilder = new StringBuilder();
+		StringBuilder nodeBuilder = new StringBuilder();
 
-		buildOrderStr(this, str1);
-		buildOrderStr(node, str2);
+		buildOrderStr(this, thisBuilder);
+		buildOrderStr(node, nodeBuilder);
 
-		return str1.indexOf(str2.toString()) != -1;
+		return thisBuilder.toString().contains(nodeBuilder.toString());
 	}
 }
