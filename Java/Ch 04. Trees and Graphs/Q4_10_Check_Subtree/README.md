@@ -12,6 +12,12 @@ java -cp ./Java/classes Q4_10_Check_Subtree.QuestionA
 java -cp ./Java/classes Q4_10_Check_Subtree.QuestionB
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 04.\ Trees\ and\ Graphs/Q4_10_Check_Subtree/ghojeong/*.java
+
+java -cp ./Java/classes Q4_10_Check_Subtree.ghojeong.Question
+```
+
 ## Output
 
 ### QuestionA
