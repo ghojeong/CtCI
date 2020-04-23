@@ -8,7 +8,7 @@ public class Question {
 	public static void weaveLists(LinkedList<Integer> leftList, LinkedList<Integer> rightList,
 			ArrayList<LinkedList<Integer>> weavedSeq, LinkedList<Integer> prefixList) {
 
-		if (leftList.size() == 0 || rightList.size() == 0) {
+		if (leftList.size() == 0 || rightList.size() == 0) { // leaf node 에 도착
 			LinkedList<Integer> weavedList = new LinkedList<Integer>();
 			weavedList.addAll(prefixList);
 			weavedList.addAll(leftList);
@@ -17,6 +17,7 @@ public class Question {
 			return;
 		}
 
+		// leftList와 rightList 안의 순서가 바뀌지 않도록, leftList와 rightList를 섞는다.
 		int leftFirstNode = leftList.removeFirst();
 		prefixList.addLast(leftFirstNode);
 		weaveLists(leftList, rightList, weavedSeq, prefixList);
@@ -34,6 +35,8 @@ public class Question {
 		ArrayList<LinkedList<Integer>> allSeq = new ArrayList<LinkedList<Integer>>();
 
 		if (node == null) {
+			// 빈 List 를 추가하지 않으면 list: Seq 루프를 돌때,
+			// leftSeq가 비어있더라도 rightSeq를 돌아야하는데, 돌지 못한다.
 			allSeq.add(new LinkedList<Integer>());
 			return allSeq;
 		}
