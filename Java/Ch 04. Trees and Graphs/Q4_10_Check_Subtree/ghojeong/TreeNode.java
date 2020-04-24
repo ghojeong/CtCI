@@ -34,6 +34,7 @@ public class TreeNode {
 
 	private void buildOrderStr(TreeNode node, StringBuilder sb) {
 		if (node == null) {
+			sb.append("X");
 			return;
 		}
 		sb.append(node.data);
@@ -42,6 +43,11 @@ public class TreeNode {
 	}
 
 	public boolean containsTree(TreeNode node) {
+		if (node == null) {
+			// The empty tree is a subtree of every tree.
+			return true;
+		}
+
 		StringBuilder thisBuilder = new StringBuilder();
 		StringBuilder nodeBuilder = new StringBuilder();
 
