@@ -20,6 +20,35 @@ java -cp ./Java/classes etc.heap.Main
 
 ## 백준 풀이
 
+### 최소힙 PriorityQueue
+
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.PriorityQueue;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int n = Integer.parseInt(br.readLine());
+    PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+
+    for (int i = 0; i < n; i++) {
+      int val = Integer.parseInt(br.readLine());
+      if (val == 0) {
+        if (pq.size() < 1) {
+          System.out.println(0);
+          continue;
+        }
+        System.out.println(pq.poll());
+        continue;
+      }
+      pq.offer(val);
+    }
+  }
+}
+```
+
 ### 최소힙
 
 ```java
@@ -95,6 +124,59 @@ public class Main {
         continue;
       }
       heap.push(val);
+    }
+  }
+}
+```
+
+### 최대힙 PriorityQueue
+
+```java
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.PriorityQueue;
+
+public class Main {
+
+  public static class MaxInteger implements Comparable<MaxInteger> {
+    int integer;
+
+    public MaxInteger(int integer) {
+      this.integer = integer;
+    }
+
+    @Override
+    public String toString() {
+      // TODO Auto-generated method stub
+      return Integer.toString(integer);
+    }
+
+    @Override
+    public int compareTo(MaxInteger maxInt) {
+      if (this.integer < maxInt.integer)
+        return 1;
+      if (this.integer > maxInt.integer)
+        return -1;
+      return 0;
+    }
+  }
+
+  public static void main(String[] args) throws Exception {
+    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    int n = Integer.parseInt(br.readLine());
+    PriorityQueue<MaxInteger> pq = new PriorityQueue<MaxInteger>();
+
+    for (int i = 0; i < n; i++) {
+      int val = Integer.parseInt(br.readLine());
+      if (val == 0) {
+        if (pq.size() < 1) {
+          System.out.println(0);
+          continue;
+        }
+        System.out.println(pq.poll());
+        continue;
+      }
+      pq.offer(new MaxInteger(val));
     }
   }
 }
