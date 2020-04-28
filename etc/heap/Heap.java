@@ -16,6 +16,7 @@ public abstract class Heap {
     arr[j] = tmp;
   }
 
+  // NOTE: priority 값이 더 높은게, 우선적으로 pop 되어야 한다.
   protected abstract int priority(Object item);
 
   public void push(int val) {
