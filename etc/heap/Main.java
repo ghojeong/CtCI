@@ -1,22 +1,24 @@
 package etc.heap;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 public class Main {
-  public static void main(String[] args) throws Exception {
-    BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    int n = Integer.parseInt(br.readLine());
-    // Heap heap = new MinHeap(n);
-    Heap heap = new MaxHeap(n);
-
-    for (int i = 0; i < n; i++) {
-      int val = Integer.parseInt(br.readLine());
+  private static void print(int[] arr, Heap heap) {
+    for (int i = 0; i < arr.length; i++) {
+      int val = arr[i];
       if (val == 0) {
         System.out.println(heap.pop());
         continue;
       }
       heap.push(val);
     }
+  }
+
+  public static void main(String[] args) throws Exception {
+    System.out.println("\n# MaxHeap");
+    int[] maxArr = { 0, 1, 2, 0, 0, 3, 2, 1, 0, 0, 0, 0, 0 };
+    print(maxArr, new MaxHeap(maxArr.length));
+
+    System.out.println("\n# MinHeap");
+    int[] minArr = { 0, 12345678, 1, 2, 0, 0, 0, 0, 32 };
+    print(minArr, new MaxHeap(minArr.length));
   }
 }

@@ -2,21 +2,54 @@ package etc.heap;
 
 public abstract class Heap {
   // NOTE: arr[1] == root
-  protected int[] arr;
-  protected int size;
+  private Object[] arr;
+  private int size;
 
   public Heap(int capacity) {
-    this.arr = new int[capacity];
+    this.arr = new Object[capacity];
     this.size = 0;
   };
 
-  protected void swap(int i, int j) {
-    int tmp = arr[i];
+  private void swap(int i, int j) {
+    Object tmp = arr[i];
     arr[i] = arr[j];
     arr[j] = tmp;
   }
 
-  public abstract void push(int val);
+  protected abstract int priority(Object item);
 
-  public abstract int pop();
+  public void push(int val) {
+    arr[++size] = val;
+
+    // NOTE: arr[i/2] == parent of arr[i]
+    for (int idx = size; idx > 1; idx /= 2) {
+      int pIdx = idx / 2;
+      if (priority(arr[pIdx]) >= priority(arr[idx])) {
+        break;
+      }
+      swap(idx, pIdx);
+    }
+  }
+
+  public Object pop() {
+    if (size < 1) {
+      return 0;
+    }
+    Object root = arr[1];
+    arr[1] = arr[size--];
+
+    // NOTE: arr[i*2], arr[i*2 + 1] : children of arr[i]
+    for (int idx = 1; idx * 2 <= size;) {
+      int cIdx = idx * 2;
+      if (cIdx < size && priority(arr[cIdx]) < priority(arr[cIdx + 1])) {
+        cIdx++;
+      }
+      if (priority(arr[idx]) >= priority(arr[cIdx])) {
+        break;
+      }
+      swap(idx, cIdx);
+      idx = cIdx;
+    }
+    return root;
+  }
 }
