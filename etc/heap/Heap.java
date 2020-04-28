@@ -19,6 +19,7 @@ public abstract class Heap {
   // NOTE: priority 값이 더 높은게, 우선적으로 pop 되어야 한다.
   protected abstract int priority(Object item);
 
+  // Big-O == O(lg n)
   public void push(int val) {
     arr[++size] = val;
 
@@ -32,6 +33,7 @@ public abstract class Heap {
     }
   }
 
+  // Big-O == O(lg n)
   public Object pop() {
     if (size < 1) {
       return 0;
