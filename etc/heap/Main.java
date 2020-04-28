@@ -12,7 +12,7 @@ public class Main {
     }
   }
 
-  public static void main(String[] args) throws Exception {
+  public static void main(String[] args) {
     System.out.println("\n# MaxHeap");
     int[] maxArr = { 0, 1, 2, 0, 0, 3, 2, 1, 0, 0, 0, 0, 0 };
     print(maxArr, new MaxHeap(maxArr.length));
