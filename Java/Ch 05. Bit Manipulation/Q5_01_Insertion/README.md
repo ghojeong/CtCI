@@ -11,6 +11,12 @@ javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 
 java -cp ./Java/classes Q5_01_Insertion.Question
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 05.\ Bit\ Manipulation/Q5_01_Insertion/ghojeong/*.java
+
+java -cp ./Java/classes Q5_01_Insertion.ghojeong.Question
+```
+
 ## Output
 
 ### Question
