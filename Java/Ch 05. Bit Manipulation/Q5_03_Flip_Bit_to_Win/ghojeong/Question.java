@@ -17,12 +17,12 @@ public class Question {
 		int pos = 0;
 		int maxPos = 0;
 		while (a != 0) {
-			if ((a & 1) == 1) {
-				currentLength++;
-			} else if ((a & 1) == 0) {
+			if ((a & 1) == 0) {
 				/* Update to 0 (if next bit is 0) or currentLength (if next bit is 1). */
 				previousLength = (a & 2) == 0 ? 0 : currentLength;
 				currentLength = 0;
+			} else {
+				currentLength++;
 			}
 			int length = previousLength + currentLength + 1;
 			if (length > maxLength) {
