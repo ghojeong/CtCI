@@ -11,6 +11,12 @@ javac -Xlint -d ./Java/classes ./Java/Ch\ 05.\ Bit\ Manipulation/Q5_02_Binary_to
 java -cp ./Java/classes Q5_02_Binary_to_String.Question
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 05.\ Bit\ Manipulation/Q5_02_Binary_to_String/ghojeong/*.java
+
+java -cp ./Java/classes Q5_02_Binary_to_String.ghojeong.Question
+```
+
 ## Output
 
 ### Question
