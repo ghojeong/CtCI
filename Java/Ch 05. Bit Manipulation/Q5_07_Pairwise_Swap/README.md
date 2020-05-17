@@ -11,6 +11,12 @@ javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 
 java -cp ./Java/classes Q5_07_Pairwise_Swap.Question
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 05.\ Bit\ Manipulation/Q5_07_Pairwise_Swap/ghojeong/*.java
+
+java -cp ./Java/classes Q5_07_Pairwise_Swap.ghojeong.Question
+```
+
 ## Output
 
 ### Question

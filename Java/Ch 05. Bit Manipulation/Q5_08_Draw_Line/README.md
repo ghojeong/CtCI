@@ -11,6 +11,12 @@ javac -Xlint -d ./Java/classes ./Java/Ch\ 05.\ Bit\ Manipulation/Q5_08_Draw_Line
 java -cp ./Java/classes Q5_08_Draw_Line.Question
 ```
 
+```sh
+javac -Xlint -d ./Java/classes ./Java/Ch\ 05.\ Bit\ Manipulation/Q5_08_Draw_Line/ghojeong/*.java
+
+java -cp ./Java/classes Q5_08_Draw_Line.ghojeong.Question
+```
+
 ## Output
 
 ### Question
