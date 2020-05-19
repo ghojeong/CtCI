@@ -25,7 +25,7 @@ public class Question {
 		for (int i = fromByte; i <= toByte; i++) {
 			screen[i] = (byte) 0xFF;
 		}
-		screen[fromByte] &= (byte) (0xFF >> (x1 % 8));
+		screen[fromByte] &= (byte) (0xFF >>> (x1 % 8));
 		screen[toByte] &= (byte) (0xFF << (7 - (x2 % 8)));
 	}
 
