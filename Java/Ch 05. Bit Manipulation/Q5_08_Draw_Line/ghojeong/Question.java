@@ -1,10 +1,6 @@
 package Q5_08_Draw_Line.ghojeong;
 
 public class Question {
-	public static int computeByteNum(int width, int x, int y) {
-		return (width * y + x) / 8;
-	}
-
 	public static void drawLine(byte[] screen, int width, int x1, int x2, int y) {
 		int start_offset = x1 % 8;
 		int first_full_byte = x1 / 8;
@@ -42,36 +38,32 @@ public class Question {
 		}
 	}
 
-	public static void printByte(byte b) {
-		for (int i = 7; i >= 0; i--) {
-			char c = ((b >> i) & 1) == 1 ? '1' : '_';
-			System.out.print(c);
-		}
-	}
-
 	public static void printScreen(byte[] screen, int width) {
 		int height = screen.length * 8 / width;
-		for (int r = 0; r < height; r++) {
-			for (int c = 0; c < width; c += 8) {
-				byte b = screen[computeByteNum(width, c, r)];
-				printByte(b);
+		for (int y = 0; y < height; y++) {
+			for (int x = 0; x < width; x += 8) {
+				byte b = screen[(width * y + x) / 8];
+				for (int i = 7; i >= 0; i--) {
+					char c = ((b >> i) & 1) == 1 ? '1' : '#';
+					System.out.print(c);
+				}
 			}
-			System.out.println("");
+			System.out.println();
 		}
 	}
 
 	public static void main(String[] args) {
 		int width = 8 * 1;
 		int height = 1;
-		for (int r = 0; r < height; r++) {
-			for (int c1 = 0; c1 < width; c1++) {
-				for (int c2 = c1; c2 < width; c2++) {
+		for (int y = 0; y < height; y++) {
+			for (int x1 = 0; x1 < width; x1++) {
+				for (int x2 = x1; x2 < width; x2++) {
 					byte[] screen = new byte[width * height / 8];
 
-					System.out.println("row: " + r + ": " + c1 + " -> " + c2);
-					drawLine(screen, width, c1, c2, r);
+					System.out.println("width:" + width + ", x1:" + x1 + ", x2:" + x2 + ", y:" + y);
+					drawLine(screen, width, x1, x2, y);
 					printScreen(screen, width);
-					System.out.println("\n\n");
+					System.out.println();
 				}
 			}
 		}
