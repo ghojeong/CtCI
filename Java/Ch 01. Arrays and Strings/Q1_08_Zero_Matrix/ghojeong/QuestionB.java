@@ -1,34 +1,6 @@
 package Q1_08_Zero_Matrix.ghojeong;
 
-public class Question {
-  public static int[][] randomMatrix(int rowM, int colN) {
-    int[][] matrix = new int[rowM][colN];
-    for (int i = 0; i < rowM; i++) {
-      for (int j = 0; j < colN; j++) {
-        matrix[i][j] = 20 - (int) (Math.random() * 40);
-      }
-    }
-    return matrix;
-  }
-
-  public static void printMatrix(int[][] matrix) {
-    for (int i = 0; i < matrix.length; i++) {
-      for (int j = 0; j < matrix[i].length; j++) {
-        if (matrix[i][j] < 10 && matrix[i][j] > -10) {
-          System.out.print(" ");
-        }
-        if (matrix[i][j] < 100 && matrix[i][j] > -100) {
-          System.out.print(" ");
-        }
-        if (matrix[i][j] >= 0) {
-          System.out.print(" ");
-        }
-        System.out.print(" " + matrix[i][j]);
-      }
-      System.out.println();
-    }
-  }
-
+public class QuestionB {
   public static void nullifyRow(int[][] matrix, int row) {
     for (int j = 0; j < matrix[0].length; j++) {
       matrix[row][j] = 0;
@@ -97,12 +69,12 @@ public class Question {
   }
 
   public static void main(String[] args) {
-    int[][] matrix = randomMatrix(10, 15);
-    printMatrix(matrix);
+    int[][] matrix = Matrix.random(10, 15);
+    Matrix.print(matrix);
 
     setZeros(matrix);
 
     System.out.println();
-    printMatrix(matrix);
+    Matrix.print(matrix);
   }
 }

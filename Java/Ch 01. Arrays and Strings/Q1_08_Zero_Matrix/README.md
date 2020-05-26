@@ -16,5 +16,6 @@ java -cp ./Java/classes Q1_08_Zero_Matrix.Tester
 ```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 01.\ Arrays\ and\ Strings/Q1_08_Zero_Matrix/ghojeong/*.java
 
-java -cp ./Java/classes Q1_08_Zero_Matrix.ghojeong.Question
+java -cp ./Java/classes Q1_08_Zero_Matrix.ghojeong.QuestionA
+java -cp ./Java/classes Q1_08_Zero_Matrix.ghojeong.QuestionB
 ```
