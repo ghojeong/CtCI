@@ -2,20 +2,23 @@
 
 [Cracking the Coding Interview](http://www.yes24.com/Product/Goods/44305533)의 공부 자료
 
+## 일시
+
+- 매주 화목토 오후 10
+- 화(고정완), 목(전태준), 토(이정배)
+- 최대 1시간 (오후 10시 - 11시) 진행
+
 ## 진행 상황
 
-- 고정완(6/2 화): Ch 1. 문제 9번
-- 전태준(6/4 목): Ch 2. 문제 4번
-- 이정배(6/6 토): Ch 2. 문제 5번
+- 6/06(토): 전태준(Trie 문제 하나 풀기), 이정배(KMP)
+- 6/09(화): 고정완(Boyer-Moore)
+- 6/11(목): 전태준(카프라비)
+- 이후: 이번달에 CtCI의 Ch2와 Ch3 끝내기
 
-## Study Plan
+## Backlog
 
-- [CtCI.pdf](./CtCI.pdf)에 나와있는 문제들을 푼다.
-  - CtCI 문제가 아니라, 추천받은 문제를 라이브 코딩할 수도 있다.
-  - 이 경우 미리 풀은 CtCI 문제를 gitHub에 올려두어야 한다.
-- 일시: 매주 화목토 오후 10
-  - 화(고정완), 목(전태준), 토(이정배)
-  - 최대 1시간 (오후 10시 - 11시) 진행
+- [Substring 알고리즘 공부](http://1ambda.github.io/algorithm/algorithm-part2-4/)
+- [LeetCode](https://leetcode.com/explore/featured/card/top-interview-questions-easy)
 
 ## Command
 
@@ -29,11 +32,3 @@ java -cp ./Java/classes ${packageName}.${className}
 // 컴파일된 class 삭제
 rm -rf ./Java/classes && rm ./JUnit/*.class
 ```
-
-## Tip
-
-풀이순서
-
-1. 메모장에 어떻게 구현할 건지 아이디어를 그린다.
-2. 빅오를 계산한다.
-3. 마지막에 코드를 구현한다.
