@@ -1,6 +1,7 @@
 package etc.substring;
 
 // Boyer Moore Algorithm with Good Suffix heuristic
+// https://www.geeksforgeeks.org/boyer-moore-algorithm-good-suffix-heuristic/?ref=lbp
 public class GoodSuffix {
 
   static int[] preprocess(char[] pat) {

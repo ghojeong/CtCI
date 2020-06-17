@@ -1,6 +1,7 @@
 package etc.substring;
 
 // Boyer Moore with Bad Character Heuristic
+// https://www.geeksforgeeks.org/boyer-moore-algorithm-for-pattern-searching/
 class BadChar {
 
   static int max(int a, int b) {
