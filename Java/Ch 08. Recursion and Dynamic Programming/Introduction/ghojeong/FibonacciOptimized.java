@@ -1,3 +1,7 @@
+
+// spatial BigO = O(1)
+// temporal BigO = O(n)
+
 public class FibonacciOptimized {
 	public static int fibonacci(int n) {
 		if (n == 0) {

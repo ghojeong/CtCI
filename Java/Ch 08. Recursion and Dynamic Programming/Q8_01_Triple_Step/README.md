@@ -11,6 +11,8 @@ javac -Xlint -d ./Java/classes ./Java/Ch\ 08.\ Recursion\ and\ Dynamic\ Programm
 java -cp ./Java/classes Q8_01_Triple_Step.QuestionA
 java -cp ./Java/classes Q8_01_Triple_Step.QuestionB
 java -cp ./Java/classes Q8_01_Triple_Step.Tester
+
+java -cp ./Java/classes Q8_01_Triple_Step.ghojeong.Tester
 ```
 
 ## Output

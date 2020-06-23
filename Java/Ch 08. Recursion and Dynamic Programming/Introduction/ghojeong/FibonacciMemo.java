@@ -1,3 +1,7 @@
+
+// spatial BigO = O(n)
+// temporal BigO = O(n)
+
 public class FibonacciMemo {
 	public static int fibonacci(int n) {
 		return fibonacci(n, new int[n + 1]);

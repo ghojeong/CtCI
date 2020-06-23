@@ -1,3 +1,5 @@
+
+// spatial & temporal BigO = O(2^n)
 public class FibonacciRecursive {
 	public int fibonacci(int i) {
 		if (i == 0) {

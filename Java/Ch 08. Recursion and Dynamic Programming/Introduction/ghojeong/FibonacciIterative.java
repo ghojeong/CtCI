@@ -1,3 +1,7 @@
+
+// spatial BigO = O(n)
+// temporal BigO = O(n)
+
 public class FibonacciIterative {
 	public static int fibonacci(int n) {
 		if (n == 0) {
