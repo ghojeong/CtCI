@@ -1,0 +1,65 @@
+# Q5_08_Draw_Line
+
+- 문제 페이지: 147
+- 풀이 페이지: 356
+
+## Command
+
+```sh
+javac -Xlint -d ./Java/classes ./Java/CtCILibrary/CtCILibrary/*.java ./Java/Ch\ 08.\ Recursion\ and\ Dynamic\ Programming/Q8_02_Robot_in_a_Grid/**/*.java
+
+java -cp ./Java/classes Q8_02_Robot_in_a_Grid.QuestionA
+java -cp ./Java/classes Q8_02_Robot_in_a_Grid.QuestionB
+java -cp ./Java/classes Q8_02_Robot_in_a_Grid.Tester
+```
+
+## Output
+
+### QuestionA
+
+```txt
+01101
+11011
+10011
+10110
+01101
+No path found.
+```
+
+### QuestionB
+
+```txt
+10001011011101100001
+11110010101010100100
+01101010110000100001
+01010111111111001001
+10111111000110101100
+11011100011010000010
+00101010100111110101
+00001110000101000111
+11010111111111001011
+11001100101100110111
+00101110011011110111
+11111101101100110101
+00111001011010110011
+11111000111111111110
+10001110011111001110
+11011111111011100111
+01011110110101011100
+11111101110001111010
+11011011110000101100
+11101110001100001010
+No path found.
+```
+
+### Tester
+
+```txt
+00101
+11000
+10111
+11011
+11011
+No path found.
+No path found.
+```
