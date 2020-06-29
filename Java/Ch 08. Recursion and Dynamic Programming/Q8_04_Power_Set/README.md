@@ -8,7 +8,10 @@
 ```sh
 javac -Xlint -d ./Java/classes ./Java/Ch\ 08.\ Recursion\ and\ Dynamic\ Programming/Q8_04_Power_Set/**/*.java
 
-java -cp ./Java/classes Q8_04_Power_Set.Question
+java -cp ./Java/classes Q8_04_Power_Set.QuestionA
+java -cp ./Java/classes Q8_04_Power_Set.QuestionB
+
+java -cp ./Java/classes Q8_04_Power_Set.ghojeong.Question
 ```
 
 ## Output
