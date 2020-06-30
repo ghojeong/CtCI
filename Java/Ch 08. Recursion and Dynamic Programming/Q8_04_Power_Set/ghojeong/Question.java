@@ -1,6 +1,6 @@
 package Q8_04_Power_Set.ghojeong;
 
-import java.util.*;
+import java.util.ArrayList;
 
 public class Question {
 
@@ -24,23 +24,19 @@ public class Question {
 		return allSubsets;
 	}
 
-	public static ArrayList<Integer> convertIntToSet(int x, ArrayList<Integer> set) {
-		ArrayList<Integer> subset = new ArrayList<Integer>();
-		int index = 0;
-		for (int k = x; k > 0; k >>= 1) {
-			if ((k & 1) == 1) {
-				subset.add(set.get(index));
-			}
-			index++;
-		}
-		return subset;
-	}
-
 	public static ArrayList<ArrayList<Integer>> getSubsetsB(ArrayList<Integer> set) {
 		ArrayList<ArrayList<Integer>> allSubsets = new ArrayList<ArrayList<Integer>>();
 		int max = 1 << set.size(); /* Compute 2^n */
-		for (int k = 0; k < max; k++) {
-			ArrayList<Integer> subset = convertIntToSet(k, set);
+		for (int i = 0; i < max; i++) {
+			// convert i to subset
+			ArrayList<Integer> subset = new ArrayList<Integer>();
+			int idx = 0;
+			for (int j = i; j > 0; j >>= 1) {
+				if ((j & 1) == 1) {
+					subset.add(set.get(idx));
+				}
+				idx++;
+			}
 			allSubsets.add(subset);
 		}
 		return allSubsets;
