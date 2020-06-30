@@ -21,9 +21,9 @@ public class Question {
 			if (array[mid] == mid) {
 				return mid;
 			} else if (array[mid] > mid) {
-				end = mid - 1;
-			} else {
 				start = mid + 1;
+			} else {
+				end = mid - 1;
 			}
 		}
 		return -1;
