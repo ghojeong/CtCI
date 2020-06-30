@@ -4,14 +4,11 @@ import java.util.ArrayList;
 
 public class Question {
 
-	public static ArrayList<ArrayList<Integer>> getSubsetsA(ArrayList<Integer> set, int index) {
-		ArrayList<ArrayList<Integer>> allSubsets;
-		if (set.size() == index) { // Base case - add empty set
-			allSubsets = new ArrayList<ArrayList<Integer>>();
-			allSubsets.add(new ArrayList<Integer>());
-		} else {
-			allSubsets = getSubsetsA(set, index + 1);
-			int item = set.get(index);
+	public static ArrayList<ArrayList<Integer>> getSubsetsA(ArrayList<Integer> set) {
+		ArrayList<ArrayList<Integer>> allSubsets = new ArrayList<ArrayList<Integer>>();
+		allSubsets.add(new ArrayList<Integer>());
+		for (int i = 0; i < set.size(); i++) {
+			int item = set.get(i);
 			ArrayList<ArrayList<Integer>> moreSubsets = new ArrayList<ArrayList<Integer>>();
 			for (ArrayList<Integer> subset : allSubsets) {
 				ArrayList<Integer> newSubset = new ArrayList<Integer>();
@@ -47,7 +44,7 @@ public class Question {
 		for (int i = 0; i < 3; i++) {
 			list.add(i);
 		}
-		ArrayList<ArrayList<Integer>> subsetsA = getSubsetsA(list, 0);
+		ArrayList<ArrayList<Integer>> subsetsA = getSubsetsA(list);
 		ArrayList<ArrayList<Integer>> subsetsB = getSubsetsB(list);
 		System.out.println(subsetsA.toString());
 		System.out.println(subsetsB.toString());
