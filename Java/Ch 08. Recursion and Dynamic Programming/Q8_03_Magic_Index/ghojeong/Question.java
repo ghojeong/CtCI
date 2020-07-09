@@ -52,12 +52,34 @@ public class Question {
 	}
 
 	public static void main(String[] args) {
-		// int[] array = { 0, 1, 2, 3, 4, 5 };
-		int[] array = { 5, 5, 5, 5, 5, 5 };
-		int brute = magicBrute(array);
-		int itr = magicIterative(array);
-		int rec = magicRecursive(array, 0, array.length - 1);
-		System.out.println("brute:" + brute + ", iterative:" + itr + ", recursive:" + rec);
+		int[] array6 = { 0, 1, 2, 3, 4, 5 };
+		int[] array0 = { 0, 0, 0, 0, 0, 0 };
+		int[] array1 = { 1, 1, 1, 1, 1, 1 };
+		int[] array2 = { 2, 2, 2, 2, 2, 2 };
+		int[] array3 = { 3, 3, 3, 3, 3, 3 };
+		int[] array4 = { 4, 4, 4, 4, 4, 4 };
+		int[] array5 = { 5, 5, 5, 5, 5, 5 };
+		int[] array7 = { -10, -9, 2, 2, 2, 2, 2, 200, 300, 4000, 50000 };
+		int[] array8 = { -10, -9, 4, 4, 4, 6, 6, 200, 300, 4000, 50000 };
+
+		System.out.println("array0: " + "brute:" + magicBrute(array0) + ", iterative:" + magicIterative(array0)
+				+ ", recursive:" + magicRecursive(array0, 0, array0.length - 1));
+		System.out.println("array1: " + "brute:" + magicBrute(array1) + ", iterative:" + magicIterative(array1)
+				+ ", recursive:" + magicRecursive(array1, 0, array1.length - 1));
+		System.out.println("array2: " + "brute:" + magicBrute(array2) + ", iterative:" + magicIterative(array2)
+				+ ", recursive:" + magicRecursive(array2, 0, array2.length - 1));
+		System.out.println("array3: " + "brute:" + magicBrute(array3) + ", iterative:" + magicIterative(array3)
+				+ ", recursive:" + magicRecursive(array3, 0, array3.length - 1));
+		System.out.println("array4: " + "brute:" + magicBrute(array4) + ", iterative:" + magicIterative(array4)
+				+ ", recursive:" + magicRecursive(array4, 0, array4.length - 1));
+		System.out.println("array5: " + "brute:" + magicBrute(array5) + ", iterative:" + magicIterative(array5)
+				+ ", recursive:" + magicRecursive(array5, 0, array5.length - 1));
+		System.out.println("array6: " + "brute:" + magicBrute(array6) + ", iterative:" + magicIterative(array6)
+				+ ", recursive:" + magicRecursive(array6, 0, array6.length - 1));
+		System.out.println("array7: " + "brute:" + magicBrute(array7) + ", iterative:" + magicIterative(array7)
+				+ ", recursive:" + magicRecursive(array7, 0, array7.length - 1));
+		System.out.println("array8: " + "brute:" + magicBrute(array8) + ", iterative:" + magicIterative(array8)
+				+ ", recursive:" + magicRecursive(array8, 0, array8.length - 1));
 	}
 
 }
