@@ -12,13 +12,13 @@ java ${packageName}.${className}
 
 ## 15659
 
-- 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
-
-### Permutation
+- 문제
+  - 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
+- Solution: Permutation.java
 
 ## 15650
 
-- 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
-- 고른 수열은 오름차순이어야 한다.
-
-### Combination
+- 문제
+  - 1부터 N까지 자연수 중에서 중복 없이 M개를 고른 수열
+  - 고른 수열은 오름차순이어야 한다.
+- Solution: Combination.java
