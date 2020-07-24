@@ -50,7 +50,7 @@ class Solution {
       shortestPathLen[edge.idx] = pathLen;
     }
     if (edge.pathLen>0 && edge.pathLen<pathLen) {
-      return;
+      return; // 이런 스킵이 없어도, 값은 구해지지만 timeout이 뜬다.
     } else {
       edge.pathLen = pathLen;
     }
@@ -66,10 +66,12 @@ class Solution {
   public int[] shortestAlternatingPaths(int n, int[][] red_edges, int[][] blue_edges) {
     initialize(n, red_edges, blue_edges);
     connectEdges(n, red_edges, blue_edges);
+
     visitingSet = new HashSet<Edge>();
     calcShortestPathLen(redEdges[0], 0);
     visitingSet = new HashSet<Edge>();
     calcShortestPathLen(blueEdges[0], 0);
+
     return shortestPathLen;
   }
 }
