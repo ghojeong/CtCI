@@ -1,5 +1,6 @@
-import java.util.*;
+# [Shortest Path With Alternating Colors](https://leetcode.com/problems/shortest-path-with-alternating-colors/)
 
+```java
 class Solution {
   public int MAX_EDGES = 400;
   public int[] shortestPathLen;
@@ -10,6 +11,7 @@ class Solution {
   public class Edge {
     public int idx;
     public LinkedList<Edge> toList;
+    public int pathLen = -1;
     public Edge(int idx) {
       this.idx = idx;
       this.toList = new LinkedList<Edge>();
@@ -47,12 +49,18 @@ class Solution {
     if (spl<0 || spl>pathLen) {
       shortestPathLen[edge.idx] = pathLen;
     }
+    if (edge.pathLen>0 && edge.pathLen<pathLen) {
+      return;
+    } else {
+      edge.pathLen = pathLen;
+    }
     if (!visitingSet.add(edge)) {
       return;
     }
     for(Edge toEdge: edge.toList) {
       calcShortestPathLen(toEdge, pathLen+1);
     }
+    visitingSet.remove(edge);
   }
 
   public int[] shortestAlternatingPaths(int n, int[][] red_edges, int[][] blue_edges) {
@@ -64,11 +72,6 @@ class Solution {
     calcShortestPathLen(blueEdges[0], 0);
     return shortestPathLen;
   }
-
-  public static void main(String[] args) {
-    int[][] red_edges = {{2,2},{0,1},{0,3},{0,0},{0,4},{2,1},{2,0},{1,4},{3,4}};
-    int[][] blue_edges = {{1,3},{0,0},{0,3},{4,2},{1,0}};
-    System.out.println(Arrays.toString(new Solution().shortestAlternatingPaths(5, red_edges, blue_edges)));
-    // [0,1,2,1,1]
-  }
 }
+
+```
