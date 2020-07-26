@@ -10,14 +10,13 @@
 
 ## 진행 상황
 
-- 7/07(화) 고정완: [순열, 조합, 중복순열, 중복조합](https://www.acmicpc.net/workbook/view/2052)
-- 7/09(목) 전태준: ???
-- 7/11(토) 이정배: 8.5
+- 7/29(수) 이정배:
+- 7/31(금) 전태준: 8.5
+- 8/02(일) 고정완:
 
 ## Backlog
 
-- [Substring 알고리즘 공부](http://1ambda.github.io/algorithm/algorithm-part2-4/)
-- [LeetCode](https://leetcode.com/explore/featured/card/top-interview-questions-easy)
+- ???
 
 ## Command
 
