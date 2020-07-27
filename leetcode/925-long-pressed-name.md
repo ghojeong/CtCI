@@ -1,4 +1,4 @@
-# [Long Pressed Name](https://leetcode.com/problems/long-pressed-name/)
+# [925.Long Pressed Name](https://leetcode.com/problems/long-pressed-name/)
 
 ```java
 class Solution {

@@ -1,4 +1,4 @@
-# [Shortest Path With Alternating Colors](https://leetcode.com/problems/shortest-path-with-alternating-colors/)
+# [1129.Shortest Path With Alternating Colors](https://leetcode.com/problems/shortest-path-with-alternating-colors/)
 
 ```java
 class Solution {
