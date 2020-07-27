@@ -34,7 +34,7 @@ class Solution {
         return false;
       }
     }
-    if (idx != typedNum.length && typedNum[idx] != 0) {
+    if (idx < typedNum.length && typedNum[idx] != 0) {
       return false;
     }
     return true;
