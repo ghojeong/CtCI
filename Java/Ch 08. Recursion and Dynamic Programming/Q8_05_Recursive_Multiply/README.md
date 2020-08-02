@@ -44,3 +44,27 @@ B: 20371134
 C: 10785591
 D: 9650475
 ```
+
+### ghojeong.Tester
+
+```txt
+QuestionA
+Success: 13494 * 22323 = 301226562
+Adds: 985
+Acc: 75441407
+
+QuestionB
+Success: 13494 * 22323 = 301226562
+Adds: 38
+Acc: 20371134
+
+QuestionC
+Success: 13494 * 22323 = 301226562
+Adds: 20
+Acc: 10785591
+
+QuestionD
+Success: 13494 * 22323 = 301226562
+Adds: 15
+Acc: 9650475
+```
