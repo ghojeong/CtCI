@@ -12,16 +12,16 @@ public class QuestionG {
   public static int product(int a, int b) {
     // return a * b;
 
+    int small = a < b ? a : b;
+    int big = a > b ? a : b;
+
     // int prod = 0;
-    // for (int i = 0; i < b; i++) {
-    // prod += a;
+    // for (int i = 0; i < small; i++) {
+    // prod += big;
     // }
     // return prod;
 
-    if (a <= b) {
-      return prodRec(a, b, 0);
-    }
-    return prodRec(b, a, 0);
+    return prodRec(small, big, 0);
   }
 
   public static void main(String[] args) {
