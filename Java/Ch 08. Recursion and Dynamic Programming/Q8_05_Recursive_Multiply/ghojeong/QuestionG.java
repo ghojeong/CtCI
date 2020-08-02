@@ -1,33 +1,39 @@
 package Q8_05_Recursive_Multiply.ghojeong;
 
-public class QuestionG {
-
-  public static int prodRec(int small, int big, int acc) {
-    if (small < 1) {
-      return acc;
-    }
-    return prodRec(small - 1, big, acc + big);
+public class QuestionG extends Question {
+  public QuestionG(String label) {
+    super.label = label;
   }
 
-  public static int product(int a, int b) {
-    // return a * b;
+  public static int memo[];
 
+  public int prodHelper(int small, int big) {
+    if (small < 1) {
+      return 0;
+    }
+    if (small == 1) {
+      return big;
+    }
+    if (memo[small] > 0) {
+      return memo[small];
+    }
+    counter += 1;
+    int s = small >> 1;
+    if ((small & 1) == 0) {
+      counter += 1;
+      memo[small] = prodHelper(s, big << 1);
+      return memo[small];
+    }
+    counter += 2;
+    int prodS = prodHelper(s, big);
+    memo[s] = (prodS << 1) + big;
+    return memo[s];
+  }
+
+  public int minProduct(int a, int b) {
     int small = a < b ? a : b;
     int big = a > b ? a : b;
-
-    // int prod = 0;
-    // for (int i = 0; i < small; i++) {
-    // prod += big;
-    // }
-    // return prod;
-
-    return prodRec(small, big, 0);
-  }
-
-  public static void main(String[] args) {
-    int a = 13494;
-    int b = 22323;
-    System.out.println(a * b);
-    System.out.println(product(a, b));
+    memo = new int[small + 1];
+    return prodHelper(small, big);
   }
 }
