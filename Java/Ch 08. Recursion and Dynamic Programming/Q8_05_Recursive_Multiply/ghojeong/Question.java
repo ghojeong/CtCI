@@ -1,38 +1,38 @@
 package Q8_05_Recursive_Multiply.ghojeong;
 
-public class Question {
-	public static int counter = 0;
+public abstract class Question {
+	public int counter = 0;
+	public String label;
 
-	/*
-	 * This is an algorithm called the peasant algorithm.
-	 * https://en.wikipedia.org/wiki/Multiplication_algorithm#
-	 * Peasant_or_binary_multiplication
-	 */
-	public static int minProduct(int a, int b) {
-		if (a < b)
-			return minProduct(b, a);
-		int value = 0;
-		while (a > 0) {
-			counter++;
-			if ((a % 10) % 2 == 1) {
-				value += b;
-			}
-			a >>= 1;
-			b <<= 1;
+	public abstract int minProduct(int a, int b);
+
+	public void printProduct(int a, int b) {
+		int product = a * b;
+		int minProduct = minProduct(a, b);
+		if (product == minProduct) {
+			System.out.println("Success: " + a + " * " + b + " = " + product);
+		} else {
+			System.out.println("Failure: " + a + " * " + b + " = " + product + " instead of " + minProduct);
 		}
-		return value;
+		System.out.println("Adds: " + counter);
 	}
 
-	public static void main(String[] args) {
-		for (int i = 0; i < 100; i++) {
-			for (int j = 0; j < 100; j++) {
-				int prod1 = minProduct(i, j);
-				int prod2 = i * j;
-				if (prod1 != prod2) {
-					System.out.println("ERROR: " + i + " * " + j + " = " + prod2 + ", not " + prod1);
+	public void printCounter(int max) {
+		int acc = 0;
+
+		for (int a = 0; a < max; a++) {
+			for (int b = 0; b < max; b++) {
+				counter = 0;
+				int prod = a * b;
+				int prodQ = minProduct(a, b);
+				acc += counter;
+
+				if (prod != prodQ) {
+					System.out.println(" Failure: " + a + " * " + b + " = " + prod + " instead of (" + prodQ + ")");
+					break;
 				}
 			}
 		}
+		System.out.println("Acc: " + acc);
 	}
-
 }
