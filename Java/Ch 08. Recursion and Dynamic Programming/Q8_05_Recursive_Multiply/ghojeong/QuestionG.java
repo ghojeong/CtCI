@@ -18,13 +18,13 @@ public class QuestionG extends Question {
       return memo[small];
     }
     counter += 1;
-    int s = small >> 1;
     if ((small & 1) == 0) {
       counter += 1;
-      memo[small] = prodHelper(s, big << 1);
+      memo[small] = prodHelper(small >> 1, big << 1);
       return memo[small];
     }
     counter += 2;
+    int s = small >> 1;
     int prodS = prodHelper(s, big);
     memo[s] = (prodS << 1) + big;
     return memo[s];
