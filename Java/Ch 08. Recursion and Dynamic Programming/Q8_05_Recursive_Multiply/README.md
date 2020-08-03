@@ -9,8 +9,13 @@
 javac -Xlint -d ./Java/classes ./Java/Ch\ 08.\ Recursion\ and\ Dynamic\ Programming/Q8_05_Recursive_Multiply/**/*.java
 
 java -cp ./Java/classes Q8_05_Recursive_Multiply.Tester
+java -cp ./Java/classes Q8_05_Recursive_Multiply.ghojeong.Tester
+```
 
-java -cp ./Java/classes Q8_05_Recursive_Multiply.ghojeong.Question
+```sh
+cd ".\Java\Ch 08. Recursion and Dynamic Programming\Q8_05_Recursive_Multiply"
+javac -Xlint -d ./Java/classes ./*.java
+javac -Xlint -d ./Java/classes ./ghojeong/*.java
 ```
 
 ## Output
