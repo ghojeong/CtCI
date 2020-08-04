@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class SnailMatrix {
 
   public static class Coordinate {
@@ -63,15 +61,19 @@ public class SnailMatrix {
       matrix[-co.yPos + maxY][co.xPos - minX] = val;
     }
     for (int i = 0; i < matrix.length; i++) {
-      System.out.println(Arrays.toString(matrix[i]));
+      for (int j = 0; j < matrix[i].length; j++) {
+        StringBuilder sb = new StringBuilder();
+        System.out.printf("%4d", matrix[i][j]);
+      }
+      System.out.println("\n");
     }
   }
 
   public static void main(String[] args) {
-    for (int i = 1; i < 26; i++) {
+    for (int i = 1; i < 37; i++) {
       printSnailMatrix(i);
 
-      System.out.println("\n");
+      System.out.println("\n\n");
     }
   }
 }
