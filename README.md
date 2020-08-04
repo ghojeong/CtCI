@@ -18,7 +18,7 @@
 
 - ???
 
-## Command
+## Unix Command
 
 ```sh
 // 자바 컴파일
@@ -29,4 +29,18 @@ java -cp ./Java/classes ${packageName}.${className}
 
 // 컴파일된 class 삭제
 rm -rf ./Java/classes && rm ./JUnit/*.class
+```
+
+
+## CMD Command
+
+```sh
+// 자바 컴파일
+javac -Xlint ./*.java
+
+// 컴파일된 class 실행
+java ${packageName}.${className}
+
+// 컴파일된 class 삭제
+del /s *.class
 ```
