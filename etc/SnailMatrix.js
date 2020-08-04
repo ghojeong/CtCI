@@ -4,10 +4,10 @@ for (var i = 1; i < 26; i++) {
 }
 
 function printSnailMatrix(input) {
-  var minX = 0;
-  var maxY = 0;
   var xPos = 0;
   var yPos = 0;
+  var minX = 0;
+  var maxY = 0;
   var dir = 0;
   var sideLen = 1;
   var sideItr = 0;

@@ -10,12 +10,12 @@ public class SnailMatrix {
   }
 
   public static void printSnailMatrix(int input) {
+    int xPos = 0;
+    int yPos = 0;
     int maxX = 0;
     int minX = 0;
     int maxY = 0;
     int minY = 0;
-    int xPos = 0;
-    int yPos = 0;
     int dir = 0;
     int sideLen = 1;
     int sideItr = 0;
