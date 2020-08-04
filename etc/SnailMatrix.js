@@ -53,7 +53,7 @@ function printSnailMatrix(input) {
     var arrStr = "";
     for (var j = 0; j < matrix[i].length; j++) {
       if (!matrix[i][j]) {
-        arrStr += "  * ";
+        arrStr += "    ";
       } else if (matrix[i][j] < 10) {
         arrStr += "  " + matrix[i][j] + " ";
       } else {
