@@ -62,7 +62,6 @@ public class SnailMatrix {
     }
     for (int i = 0; i < matrix.length; i++) {
       for (int j = 0; j < matrix[i].length; j++) {
-        StringBuilder sb = new StringBuilder();
         System.out.printf("%4d", matrix[i][j]);
       }
       System.out.println("\n");
