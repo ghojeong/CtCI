@@ -1,4 +1,4 @@
-for (var i = 1; i < 26; i++) {
+for (var i = 0; i < 26; i++) {
   printSnailMatrix(i);
   console.log("\n\n");
 }
@@ -32,7 +32,7 @@ function printSnailMatrix(input) {
     }
     snailCo[val] = { xPos, yPos };
 
-    if (++sideItr >= sideLen) {
+    if (sideLen <= ++sideItr) {
       if (dir % 2 == 1) {
         sideLen++;
       }

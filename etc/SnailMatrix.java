@@ -46,7 +46,7 @@ public class SnailMatrix {
       }
       snailCo[val] = new Coordinate(xPos, yPos);
 
-      if (++sideItr >= sideLen) {
+      if (sideLen <= ++sideItr) {
         if ((dir % 2) == 1) {
           sideLen++;
         }
