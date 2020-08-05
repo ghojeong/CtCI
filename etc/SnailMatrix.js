@@ -1,4 +1,4 @@
-for (var i = 0; i < 26; i++) {
+for (var i = 1; i < 26; i++) {
   printSnailMatrix(i);
   console.log("\n\n");
 }
