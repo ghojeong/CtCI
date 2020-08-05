@@ -8,10 +8,10 @@ function printSnailMatrix(input) {
   var yPos = 0;
   var minX = 0;
   var maxY = 0;
-  var dir = 0;
+  var dir = 0; // direction
   var sideLen = 1;
   var sideItr = 0;
-  var snailCo = new Array();
+  var snailCo = new Array(); // Snail Coordinate
   snailCo[input] = { xPos: 0, yPos: 0 };
   for (var val = input - 1; val > 0; val--) {
     if (dir == 0) {
@@ -40,6 +40,8 @@ function printSnailMatrix(input) {
       dir = (dir + 1) % 4;
     }
   }
+
+  // 밑에는 만들어진 snailCo를 예쁘게 출력하는 코드
 
   var matrix = new Array();
   for (var val = 1; val <= input; val++) {
