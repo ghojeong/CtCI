@@ -10,6 +10,8 @@
 javac -Xlint -d ./Java/classes ./Java/Ch\ 08.\ Recursion\ and\ Dynamic\ Programming/Q8_06_Towers_of_Hanoi/**/*.java
 
 java -cp ./Java/classes Q8_06_Towers_of_Hanoi.Question
+
+java -cp ./Java/classes Q8_06_Towers_of_Hanoi.ghojeong.Question
 ```
 
 ## Output
