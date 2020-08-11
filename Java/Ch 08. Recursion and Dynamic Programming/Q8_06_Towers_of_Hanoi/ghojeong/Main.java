@@ -1,6 +1,5 @@
 package Q8_06_Towers_of_Hanoi.ghojeong;
 
-import java.util.*;
 import java.io.*;
 
 public class Main {
@@ -8,25 +7,22 @@ public class Main {
   public static BufferedReader br;
   public static StringBuilder sb;
   public static int cnt = 0;
+  public static int numberOfDisks;
 
   public static class Tower {
-    private Stack<Integer> disks;
+    private int[] diskStack;
+    private int top = 0;
     private final int name;
 
     public Tower(int name) {
-      this.disks = new Stack<Integer>();
+      this.diskStack = new int[numberOfDisks];
       this.name = name;
     }
 
-    public void add(int d) {
-      if (disks.isEmpty() || disks.peek() > d) {
-        disks.push(d);
+    private void moveTopTo(Tower t) {
+      if (t.diskStack[t.top] > this.diskStack[this.top] && this.top > 0 && t.top < numberOfDisks - 1) {
+        t.diskStack[++t.top] = this.diskStack[this.top--];
       }
-    }
-
-    public void moveTopTo(Tower t) {
-      int top = disks.pop();
-      t.add(top);
     }
 
     public void moveDisks(int quantity, Tower destination, Tower buffer) {
@@ -49,20 +45,20 @@ public class Main {
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
     br = new BufferedReader(new InputStreamReader(System.in));
     sb = new StringBuilder();
-    int numberOfDisks = Integer.parseInt(br.readLine());
+    numberOfDisks = Integer.parseInt(br.readLine());
 
     Tower source = new Tower(1);
     Tower buffer = new Tower(2);
     Tower destination = new Tower(3);
 
-    /* Load up tower */
-    for (int disk = numberOfDisks - 1; disk >= 0; disk--) {
-      source.add(disk);
+    for (int i = 0; i < numberOfDisks; i++) {
+      source.diskStack[i] = numberOfDisks - i;
     }
+    source.top = numberOfDisks - 1;
 
     source.moveDisks(numberOfDisks, destination, buffer);
 
-    bw.write(cnt + sb.toString());
+    bw.write(cnt + sb.toString() + "\n");
     br.close();
     bw.flush();
     bw.close();
