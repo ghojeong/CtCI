@@ -13,7 +13,6 @@ class GFG {
     }
     towerOfHanoi(n - 1, src, dest, aux);
     bw.write("\n" + src + " " + dest);
-    bw.flush();
     towerOfHanoi(n - 1, aux, src, dest);
   }
 

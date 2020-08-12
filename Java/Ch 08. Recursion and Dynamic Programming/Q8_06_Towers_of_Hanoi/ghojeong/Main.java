@@ -25,9 +25,10 @@ public class Main {
       return this;
     }
 
-    private void moveTopTo(Tower t) {
+    private void moveTopTo(Tower t) throws IOException {
       if (t.top + 1 < t.stack.length && this.top > 0 && t.stack[t.top] > this.stack[this.top]) {
         t.stack[++t.top] = this.stack[this.top--];
+        bw.write("\n" + this.name + " " + t.name);
       }
     }
 
@@ -36,8 +37,6 @@ public class Main {
         return;
       }
       moveDisks(n - 1, aux, dest);
-      bw.write("\n" + this.name + " " + dest.name);
-      bw.flush();
       moveTopTo(dest);
       aux.moveDisks(n - 1, dest, this);
     }
