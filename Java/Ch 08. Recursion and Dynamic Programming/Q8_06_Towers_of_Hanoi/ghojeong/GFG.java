@@ -2,7 +2,7 @@ package Q8_06_Towers_of_Hanoi.ghojeong;
 
 import java.io.*;
 
-class GFG {
+public class GFG {
   private static BufferedReader br;
   private static BufferedWriter bw;
 
@@ -23,6 +23,12 @@ class GFG {
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     bw.write(Integer.toString((1 << n) - 1));
+    if (n > 20) {
+      bw.flush();
+      bw.close();
+      return;
+    }
+
     towerOfHanoi(n, '1', '2', '3');
 
     bw.flush();

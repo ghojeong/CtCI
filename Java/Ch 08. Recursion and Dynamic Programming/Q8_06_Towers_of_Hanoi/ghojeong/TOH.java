@@ -57,6 +57,14 @@ public class TOH {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+    int totalMoves = (1 << n) - 1;
+    bw.write(Integer.toString(totalMoves));
+    if (n > 20) {
+      bw.flush();
+      bw.close();
+      return;
+    }
+
     Tower src = new Tower(n, '1').initializeSrc();
     Tower aux = new Tower(n, '2');
     Tower dest = new Tower(n, '3');
@@ -66,8 +74,6 @@ public class TOH {
       dest = aux;
       aux = temp;
     }
-    int totalMoves = (1 << n) - 1;
-    bw.write(Integer.toString(totalMoves));
     for (int i = 0; i < totalMoves; i++) {
       if (i % 3 == 0) {
         moveDiskBetween(src, aux);

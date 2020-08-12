@@ -29,15 +29,15 @@ public class Main {
       t.stack[++t.top] = this.stack[this.top--];
       bw.write("\n" + this.name + " " + t.name);
     }
+  }
 
-    void moveDisks(int n, Tower dest, Tower aux) throws IOException {
-      if (n <= 0) {
-        return;
-      }
-      moveDisks(n - 1, aux, dest);
-      moveTopTo(dest);
-      aux.moveDisks(n - 1, dest, this);
+  static void moveDisks(int n, Tower src, Tower aux, Tower dest) throws IOException {
+    if (n <= 0) {
+      return;
     }
+    moveDisks(n - 1, src, dest, aux);
+    src.moveTopTo(dest);
+    moveDisks(n - 1, aux, src, dest);
   }
 
   public static void main(String[] args) throws IOException {
@@ -46,12 +46,17 @@ public class Main {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
+    bw.write(Integer.toString((1 << n) - 1));
+    if (n > 20) {
+      bw.flush();
+      bw.close();
+      return;
+    }
+
     Tower src = new Tower(n, '1').initializeSrc();
     Tower aux = new Tower(n, '2');
     Tower dest = new Tower(n, '3');
-
-    bw.write(Integer.toString((1 << n) - 1));
-    src.moveDisks(n, dest, aux);
+    moveDisks(n, src, aux, dest);
 
     bw.flush();
     bw.close();
