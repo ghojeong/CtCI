@@ -7,7 +7,7 @@ public class TOH {
   private static BufferedWriter bw;
 
   private static class Tower {
-    private int top = 0;
+    private int top = -1;
     private int stack[];
     private final char name;
 
@@ -26,11 +26,7 @@ public class TOH {
     }
 
     boolean isEmpty() {
-      return top < 1;
-    }
-
-    boolean isFull() {
-      return top >= stack.length - 1;
+      return top < 0;
     }
 
     int peek() {
@@ -38,22 +34,20 @@ public class TOH {
     }
 
     void moveTopTo(Tower t) throws IOException {
-      if (!this.isEmpty() && !t.isFull() && this.peek() < t.peek()) {
-        t.stack[++t.top] = this.stack[this.top--];
-        bw.write("\n" + this.name + " " + t.name);
-      }
+      t.stack[++t.top] = this.stack[this.top--];
+      bw.write("\n" + this.name + " " + t.name);
     }
   }
 
-  static void moveDisksBetween(Tower t1, Tower t2) throws IOException {
+  static void moveDiskBetween(Tower t1, Tower t2) throws IOException {
     if (t1.isEmpty()) {
-      t1.moveTopTo(t2);
+      t2.moveTopTo(t1);
     } else if (t2.isEmpty()) {
-      t2.moveTopTo(t1);
-    } else if (t1.peek() > t2.peek()) {
-      t2.moveTopTo(t1);
+      t1.moveTopTo(t2);
     } else if (t1.peek() < t2.peek()) {
       t1.moveTopTo(t2);
+    } else if (t1.peek() > t2.peek()) {
+      t2.moveTopTo(t1);
     }
   }
 
@@ -67,20 +61,20 @@ public class TOH {
     Tower aux = new Tower(n, '2');
     Tower dest = new Tower(n, '3');
 
-    if (n % 2 == 0) {
+    if (n % 2 == 1) {
       Tower temp = dest;
       dest = aux;
       aux = temp;
     }
     int totalMoves = (1 << n) - 1;
-    bw.write(totalMoves);
-    for (int i = 1; i <= totalMoves; i++) {
-      if (i % 3 == 1) {
-        moveDisksBetween(src, dest);
+    bw.write(Integer.toString(totalMoves));
+    for (int i = 0; i < totalMoves; i++) {
+      if (i % 3 == 0) {
+        moveDiskBetween(src, aux);
+      } else if (i % 3 == 1) {
+        moveDiskBetween(src, dest);
       } else if (i % 3 == 2) {
-        moveDisksBetween(src, aux);
-      } else if (i % 3 == 0) {
-        moveDisksBetween(aux, dest);
+        moveDiskBetween(aux, dest);
       }
     }
 
