@@ -5,15 +5,14 @@ import java.io.*;
 public class Main {
   public static BufferedReader br;
   public static BufferedWriter bw;
-  public static int n;
 
   public static class Tower {
     private int[] diskStack;
     private int top = 0;
     private final int name;
 
-    public Tower(int name) {
-      this.diskStack = new int[n];
+    public Tower(int name, int size) {
+      this.diskStack = new int[size];
       this.name = name;
     }
 
@@ -23,35 +22,35 @@ public class Main {
       }
     }
 
-    public void moveDisks(int quantity, Tower destination, Tower buffer) throws IOException {
-      if (quantity <= 0) {
+    public void moveDisks(int n, Tower dest, Tower aux) throws IOException {
+      if (n <= 0) {
         return;
       }
-      moveDisks(quantity - 1, buffer, destination);
-      bw.write("\n" + this.name + " " + destination.name);
+      moveDisks(n - 1, aux, dest);
+      bw.write("\n" + this.name + " " + dest.name);
       bw.flush();
-      moveTopTo(destination);
-      buffer.moveDisks(quantity - 1, destination, this);
+      moveTopTo(dest);
+      aux.moveDisks(n - 1, dest, this);
     }
   }
 
   public static void main(String[] args) throws IOException {
     br = new BufferedReader(new InputStreamReader(System.in));
-    n = Integer.parseInt(br.readLine());
+    int n = Integer.parseInt(br.readLine());
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    Tower source = new Tower(1);
-    Tower buffer = new Tower(2);
-    Tower destination = new Tower(3);
+    Tower src = new Tower(1, n);
+    Tower aux = new Tower(2, n);
+    Tower dest = new Tower(3, n);
 
     for (int i = 0; i < n; i++) {
-      source.diskStack[i] = n - i;
+      src.diskStack[i] = n - i;
     }
-    source.top = n - 1;
+    src.top = n - 1;
 
     bw.write(Integer.toString((1 << n) - 1));
-    source.moveDisks(n, destination, buffer);
+    src.moveDisks(n, dest, aux);
 
     bw.flush();
     bw.close();

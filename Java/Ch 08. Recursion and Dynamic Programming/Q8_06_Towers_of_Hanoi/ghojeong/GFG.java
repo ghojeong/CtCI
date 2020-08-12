@@ -6,15 +6,15 @@ class GFG {
   public static BufferedReader br;
   public static BufferedWriter bw;
 
-  static void towerOfHanoi(int n, int src, int buffer, int dest) throws IOException {
+  static void towerOfHanoi(int n, int src, int aux, int dest) throws IOException {
     if (n < 2) {
       bw.write("\n" + src + " " + dest);
       return;
     }
-    towerOfHanoi(n - 1, src, dest, buffer);
+    towerOfHanoi(n - 1, src, dest, aux);
     bw.write("\n" + src + " " + dest);
     bw.flush();
-    towerOfHanoi(n - 1, buffer, src, dest);
+    towerOfHanoi(n - 1, aux, src, dest);
   }
 
   public static void main(String args[]) throws IOException {
