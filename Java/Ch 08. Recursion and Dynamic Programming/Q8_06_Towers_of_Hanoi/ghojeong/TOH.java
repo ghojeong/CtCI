@@ -1,6 +1,7 @@
 package Q8_06_Towers_of_Hanoi.ghojeong;
 
 import java.io.*;
+import java.math.BigInteger;
 
 public class TOH {
   private static BufferedReader br;
@@ -57,8 +58,8 @@ public class TOH {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    int totalMoves = (1 << n) - 1;
-    bw.write(Integer.toString(totalMoves));
+    BigInteger totalMoves = BigInteger.ONE.shiftLeft(n).subtract(BigInteger.ONE);
+    bw.write(totalMoves.toString());
     if (n > 20) {
       bw.flush();
       bw.close();
@@ -74,7 +75,7 @@ public class TOH {
       dest = aux;
       aux = temp;
     }
-    for (int i = 0; i < totalMoves; i++) {
+    for (int i = 0; i < totalMoves.intValue(); i++) {
       if (i % 3 == 0) {
         moveDiskBetween(src, aux);
       } else if (i % 3 == 1) {

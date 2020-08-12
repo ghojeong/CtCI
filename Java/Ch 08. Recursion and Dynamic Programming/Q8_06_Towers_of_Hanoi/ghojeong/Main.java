@@ -1,6 +1,7 @@
 package Q8_06_Towers_of_Hanoi.ghojeong;
 
 import java.io.*;
+import java.math.BigInteger;
 
 public class Main {
   private static BufferedReader br;
@@ -46,7 +47,8 @@ public class Main {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    bw.write(Integer.toString((1 << n) - 1));
+    BigInteger totalMoves = BigInteger.ONE.shiftLeft(n).subtract(BigInteger.ONE);
+    bw.write(totalMoves.toString());
     if (n > 20) {
       bw.flush();
       bw.close();
