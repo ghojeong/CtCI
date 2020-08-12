@@ -9,15 +9,15 @@ public class Main {
   public static class Tower {
     private int[] diskStack;
     private int top = 0;
-    private final int name;
+    private final char name;
 
-    public Tower(int name, int size) {
+    public Tower(char name, int size) {
       this.diskStack = new int[size];
       this.name = name;
     }
 
     private void moveTopTo(Tower t) {
-      if (t.top < n - 1 && this.top > 0 && t.diskStack[t.top] > this.diskStack[this.top]) {
+      if (t.top + 1 < t.diskStack.length && this.top > 0 && t.diskStack[t.top] > this.diskStack[this.top]) {
         t.diskStack[++t.top] = this.diskStack[this.top--];
       }
     }
@@ -40,9 +40,9 @@ public class Main {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    Tower src = new Tower(1, n);
-    Tower aux = new Tower(2, n);
-    Tower dest = new Tower(3, n);
+    Tower src = new Tower('1', n);
+    Tower aux = new Tower('2', n);
+    Tower dest = new Tower('3', n);
 
     for (int i = 0; i < n; i++) {
       src.diskStack[i] = n - i;

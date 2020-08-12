@@ -3,6 +3,9 @@ package Q8_06_Towers_of_Hanoi.ghojeong;
 import java.io.*;
 
 public class TOH {
+  public static BufferedReader br;
+  public static BufferedWriter bw;
+
   class Stack {
     int capacity;
     int top;
@@ -37,7 +40,11 @@ public class TOH {
     return stack.array[stack.top--];
   }
 
-  void moveDisksBetweenTwoPoles(Stack src, Stack dest, char s, char d) {
+  void moveDisk(char fromPeg, char toPeg, int disk) throws IOException {
+    bw.write("\n" + fromPeg + " " + toPeg);
+  }
+
+  void moveDisksBetweenTwoPoles(Stack src, Stack dest, char s, char d) throws IOException {
     int pole1TopDisk = pop(src);
     int pole2TopDisk = pop(dest);
 
@@ -65,13 +72,9 @@ public class TOH {
     }
   }
 
-  void moveDisk(char fromPeg, char toPeg, int disk) {
-    System.out.println("Move the disk " + disk + " from " + fromPeg + " to " + toPeg);
-  }
-
-  void tohIterative(int num_of_disks, Stack src, Stack aux, Stack dest) {
+  void tohIterative(int num_of_disks, Stack src, Stack aux, Stack dest) throws IOException {
     int i, total_num_of_moves;
-    char s = 'S', d = 'D', a = 'A';
+    char s = '1', a = '2', d = '3';
 
     // If number of disks is even, then interchange dest and aux
     if (num_of_disks % 2 == 0) {
@@ -97,17 +100,20 @@ public class TOH {
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException {
+    br = new BufferedReader(new InputStreamReader(System.in));
+    int n = Integer.parseInt(br.readLine());
+    br.close();
+    bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    int num_of_disks = 3;
-
+    bw.write(Integer.toString((1 << n) - 1));
     TOH ob = new TOH();
-    Stack src, dest, aux;
+    Stack src = ob.createStack(n);
+    Stack dest = ob.createStack(n);
+    Stack aux = ob.createStack(n);
+    ob.tohIterative(n, src, aux, dest);
 
-    src = ob.createStack(num_of_disks);
-    dest = ob.createStack(num_of_disks);
-    aux = ob.createStack(num_of_disks);
-
-    ob.tohIterative(num_of_disks, src, aux, dest);
+    bw.flush();
+    bw.close();
   }
 }

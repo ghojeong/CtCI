@@ -6,7 +6,7 @@ class GFG {
   public static BufferedReader br;
   public static BufferedWriter bw;
 
-  static void towerOfHanoi(int n, int src, int aux, int dest) throws IOException {
+  static void towerOfHanoi(int n, char src, char aux, char dest) throws IOException {
     if (n < 2) {
       bw.write("\n" + src + " " + dest);
       return;
@@ -24,7 +24,7 @@ class GFG {
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     bw.write(Integer.toString((1 << n) - 1));
-    towerOfHanoi(n, 1, 2, 3);
+    towerOfHanoi(n, '1', '2', '3');
 
     bw.flush();
     bw.close();
