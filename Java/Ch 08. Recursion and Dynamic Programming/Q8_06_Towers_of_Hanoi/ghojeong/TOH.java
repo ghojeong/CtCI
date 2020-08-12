@@ -7,7 +7,7 @@ public class TOH {
   private static BufferedWriter bw;
 
   private static class Tower {
-    private int top = -1;
+    private int top = 0;
     private int stack[];
     private final char name;
 
@@ -16,77 +16,44 @@ public class TOH {
       this.name = name;
     }
 
-    void push(int item) {
-      if (top + 1 < stack.length) {
-        stack[++top] = item;
+    Tower initializeSrc() {
+      int n = stack.length;
+      for (int i = 0; i < n; i++) {
+        stack[i] = n - i;
       }
+      top = n - 1;
+      return this;
     }
 
-    int pop() {
-      if (top < 0) {
-        return Integer.MIN_VALUE;
+    boolean isEmpty() {
+      return top < 1;
+    }
+
+    boolean isFull() {
+      return top >= stack.length - 1;
+    }
+
+    int peek() {
+      return stack[top];
+    }
+
+    void moveTopTo(Tower t) throws IOException {
+      if (!this.isEmpty() && !t.isFull() && this.peek() < t.peek()) {
+        t.stack[++t.top] = this.stack[this.top--];
+        bw.write("\n" + this.name + " " + t.name);
       }
-      return stack[top--];
     }
   }
 
-  static void moveDisk(char fromPeg, char toPeg, int disk) throws IOException {
-    bw.write("\n" + fromPeg + " " + toPeg);
-  }
-
-  static void moveDisksBetweenTwoPoles(Tower src, Tower dest, char s, char d) throws IOException {
-    int pole1TopDisk = src.pop();
-    int pole2TopDisk = dest.pop();
-
-    // When pole 1 is empty
-    if (pole1TopDisk == Integer.MIN_VALUE) {
-      src.push(pole2TopDisk);
-      moveDisk(d, s, pole2TopDisk);
-    }
-    // When pole2 pole is empty
-    else if (pole2TopDisk == Integer.MIN_VALUE) {
-      dest.push(pole1TopDisk);
-      moveDisk(s, d, pole1TopDisk);
-    }
-    // When top disk of pole1 > top disk of pole2
-    else if (pole1TopDisk > pole2TopDisk) {
-      src.push(pole1TopDisk);
-      src.push(pole2TopDisk);
-      moveDisk(d, s, pole2TopDisk);
-    }
-    // When top disk of pole1 < top disk of pole2
-    else {
-      dest.push(pole2TopDisk);
-      dest.push(pole1TopDisk);
-      moveDisk(s, d, pole1TopDisk);
-    }
-  }
-
-  static void tohIterative(int num_of_disks, Tower src, Tower aux, Tower dest) throws IOException {
-    int i, total_num_of_moves;
-    char s = '1', a = '2', d = '3';
-
-    // If number of disks is even, then interchange dest and aux
-    if (num_of_disks % 2 == 0) {
-      char temp = d;
-      d = a;
-      a = temp;
-    }
-    total_num_of_moves = (int) (Math.pow(2, num_of_disks) - 1);
-
-    // Larger disks will be pushed first
-    for (i = num_of_disks; i >= 1; i--) {
-      src.push(i);
-    }
-
-    for (i = 1; i <= total_num_of_moves; i++) {
-      if (i % 3 == 1) {
-        moveDisksBetweenTwoPoles(src, dest, s, d);
-      } else if (i % 3 == 2) {
-        moveDisksBetweenTwoPoles(src, aux, s, a);
-      } else if (i % 3 == 0) {
-        moveDisksBetweenTwoPoles(aux, dest, a, d);
-      }
+  static void moveDisksBetween(Tower t1, Tower t2) throws IOException {
+    if (t1.isEmpty()) {
+      t1.moveTopTo(t2);
+    } else if (t2.isEmpty()) {
+      t2.moveTopTo(t1);
+    } else if (t1.peek() > t2.peek()) {
+      t2.moveTopTo(t1);
+    } else if (t1.peek() < t2.peek()) {
+      t1.moveTopTo(t2);
     }
   }
 
@@ -96,11 +63,26 @@ public class TOH {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    bw.write(Integer.toString((1 << n) - 1));
-    Tower src = new Tower(n, '1');
+    Tower src = new Tower(n, '1').initializeSrc();
     Tower aux = new Tower(n, '2');
     Tower dest = new Tower(n, '3');
-    tohIterative(n, src, aux, dest);
+
+    if (n % 2 == 0) {
+      Tower temp = dest;
+      dest = aux;
+      aux = temp;
+    }
+    int totalMoves = (1 << n) - 1;
+    bw.write(totalMoves);
+    for (int i = 1; i <= totalMoves; i++) {
+      if (i % 3 == 1) {
+        moveDisksBetween(src, dest);
+      } else if (i % 3 == 2) {
+        moveDisksBetween(src, aux);
+      } else if (i % 3 == 0) {
+        moveDisksBetween(aux, dest);
+      }
+    }
 
     bw.flush();
     bw.close();
