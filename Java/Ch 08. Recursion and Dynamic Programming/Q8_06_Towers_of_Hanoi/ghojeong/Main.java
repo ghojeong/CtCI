@@ -3,10 +3,10 @@ package Q8_06_Towers_of_Hanoi.ghojeong;
 import java.io.*;
 
 public class Main {
-  public static BufferedReader br;
-  public static BufferedWriter bw;
+  private static BufferedReader br;
+  private static BufferedWriter bw;
 
-  public static class Tower {
+  private static class Tower {
     private int top = 0;
     private int[] stack;
     private final char name;
@@ -22,7 +22,7 @@ public class Main {
       }
     }
 
-    public void moveDisks(int n, Tower dest, Tower aux) throws IOException {
+    void moveDisks(int n, Tower dest, Tower aux) throws IOException {
       if (n <= 0) {
         return;
       }

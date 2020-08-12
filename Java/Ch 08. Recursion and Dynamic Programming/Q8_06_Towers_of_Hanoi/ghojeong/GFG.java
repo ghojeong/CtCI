@@ -3,10 +3,10 @@ package Q8_06_Towers_of_Hanoi.ghojeong;
 import java.io.*;
 
 class GFG {
-  public static BufferedReader br;
-  public static BufferedWriter bw;
+  private static BufferedReader br;
+  private static BufferedWriter bw;
 
-  static void towerOfHanoi(int n, char src, char aux, char dest) throws IOException {
+  private static void towerOfHanoi(int n, char src, char aux, char dest) throws IOException {
     if (n < 2) {
       bw.write("\n" + src + " " + dest);
       return;
