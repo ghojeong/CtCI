@@ -16,6 +16,15 @@ public class Main {
       this.name = name;
     }
 
+    Tower initializeSrc() {
+      int n = stack.length;
+      for (int i = 0; i < n; i++) {
+        stack[i] = n - i;
+      }
+      top = n - 1;
+      return this;
+    }
+
     private void moveTopTo(Tower t) {
       if (t.top + 1 < t.stack.length && this.top > 0 && t.stack[t.top] > this.stack[this.top]) {
         t.stack[++t.top] = this.stack[this.top--];
@@ -40,14 +49,9 @@ public class Main {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    Tower src = new Tower(n, '1');
+    Tower src = new Tower(n, '1').initializeSrc();
     Tower aux = new Tower(n, '2');
     Tower dest = new Tower(n, '3');
-
-    for (int i = 0; i < n; i++) {
-      src.stack[i] = n - i;
-    }
-    src.top = n - 1;
 
     bw.write(Integer.toString((1 << n) - 1));
     src.moveDisks(n, dest, aux);
