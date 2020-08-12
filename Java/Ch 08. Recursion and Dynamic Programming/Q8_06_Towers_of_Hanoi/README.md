@@ -3,6 +3,7 @@
 - 문제 페이지: 147
 - 풀이 페이지: 365
 - [백준 1914](https://www.acmicpc.net/problem/1914)
+- [백준 11729](https://www.acmicpc.net/problem/11729)
 
 ## Command
 
