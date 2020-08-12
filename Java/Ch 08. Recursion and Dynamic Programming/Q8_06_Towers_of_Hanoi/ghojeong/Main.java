@@ -7,18 +7,18 @@ public class Main {
   public static BufferedWriter bw;
 
   public static class Tower {
-    private int[] diskStack;
     private int top = 0;
+    private int[] stack;
     private final char name;
 
-    public Tower(char name, int size) {
-      this.diskStack = new int[size];
+    public Tower(int size, char name) {
+      this.stack = new int[size];
       this.name = name;
     }
 
     private void moveTopTo(Tower t) {
-      if (t.top + 1 < t.diskStack.length && this.top > 0 && t.diskStack[t.top] > this.diskStack[this.top]) {
-        t.diskStack[++t.top] = this.diskStack[this.top--];
+      if (t.top + 1 < t.stack.length && this.top > 0 && t.stack[t.top] > this.stack[this.top]) {
+        t.stack[++t.top] = this.stack[this.top--];
       }
     }
 
@@ -40,12 +40,12 @@ public class Main {
     br.close();
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-    Tower src = new Tower('1', n);
-    Tower aux = new Tower('2', n);
-    Tower dest = new Tower('3', n);
+    Tower src = new Tower(n, '1');
+    Tower aux = new Tower(n, '2');
+    Tower dest = new Tower(n, '3');
 
     for (int i = 0; i < n; i++) {
-      src.diskStack[i] = n - i;
+      src.stack[i] = n - i;
     }
     src.top = n - 1;
 

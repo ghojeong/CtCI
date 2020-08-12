@@ -6,45 +6,40 @@ public class TOH {
   public static BufferedReader br;
   public static BufferedWriter bw;
 
-  class Stack {
-    int capacity;
-    int top;
-    int array[];
+  private static class Tower {
+    int top = -1;
+    int stack[];
+
+    Tower(int size) {
+      this.stack = new int[size];
+    }
   }
 
-  Stack createStack(int capacity) {
-    Stack stack = new Stack();
-    stack.capacity = capacity;
-    stack.top = -1;
-    stack.array = new int[capacity];
-    return stack;
+  boolean isFull(Tower stack) {
+    return (stack.top == stack.stack.length - 1);
   }
 
-  boolean isFull(Stack stack) {
-    return (stack.top == stack.capacity - 1);
-  }
-
-  boolean isEmpty(Stack stack) {
+  boolean isEmpty(Tower stack) {
     return (stack.top == -1);
   }
 
-  void push(Stack stack, int item) {
+  void push(Tower stack, int item) {
     if (isFull(stack))
       return;
-    stack.array[++stack.top] = item;
+    stack.stack[++stack.top] = item;
   }
 
-  int pop(Stack stack) {
+  int pop(Tower stack) {
     if (isEmpty(stack))
       return Integer.MIN_VALUE;
-    return stack.array[stack.top--];
+    return stack.stack[stack.top--];
   }
 
   void moveDisk(char fromPeg, char toPeg, int disk) throws IOException {
     bw.write("\n" + fromPeg + " " + toPeg);
   }
 
-  void moveDisksBetweenTwoPoles(Stack src, Stack dest, char s, char d) throws IOException {
+  void moveDisksBetweenTwoPoles(Tower src, Tower dest, char s, char d) throws IOException {
     int pole1TopDisk = pop(src);
     int pole2TopDisk = pop(dest);
 
@@ -72,7 +67,7 @@ public class TOH {
     }
   }
 
-  void tohIterative(int num_of_disks, Stack src, Stack aux, Stack dest) throws IOException {
+  void tohIterative(int num_of_disks, Tower src, Tower aux, Tower dest) throws IOException {
     int i, total_num_of_moves;
     char s = '1', a = '2', d = '3';
 
@@ -107,10 +102,9 @@ public class TOH {
     bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
     bw.write(Integer.toString((1 << n) - 1));
-    TOH ob = new TOH();
-    Stack src = ob.createStack(n);
-    Stack dest = ob.createStack(n);
-    Stack aux = ob.createStack(n);
+    Tower src = new Tower(n);
+    Tower dest = new Tower(n);
+    Tower aux = new Tower(n);
     ob.tohIterative(n, src, aux, dest);
 
     bw.flush();
