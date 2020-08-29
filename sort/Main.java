@@ -19,9 +19,11 @@ public class Main {
     System.out.println();
 
     Arrays.sort(arr);
-    System.out.println("sort:  " + Arrays.toString(arr)); // 정답
-    System.out.println("Quick: " + Arrays.toString(Quick.sorted(array)));
-    System.out.println("Tim:   " + Arrays.toString(Tim.sorted(array)));
+    System.out.println("sort:     " + Arrays.toString(arr)); // 정답
+    System.out.println("Quick:    " + Arrays.toString(Quick.sorted(array)));
+    System.out.println("Tim:      " + Arrays.toString(Tim.sorted(array)));
+    System.out.println("RecMerge: " + Arrays.toString(RecMerge.sorted(array)));
+    System.out.println("ItrMerge: " + Arrays.toString(ItrMerge.sorted(array)));
 
     System.out.println();
     System.out.println("arr:   " + Arrays.toString(array));
