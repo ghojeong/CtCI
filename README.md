@@ -2,22 +2,6 @@
 
 [Cracking the Coding Interview](http://www.yes24.com/Product/Goods/44305533)의 공부 자료
 
-## 일시
-
-- 매주 화목토 오후 10
-- 화(고정완), 목(전태준), 토(이정배)
-- 최대 1시간 (오후 10시 - 11시) 진행
-
-## 진행 상황
-
-- 7/29(수) 이정배:
-- 7/31(금) 전태준:
-- 8/02(일) 고정완: 8.5
-
-## Backlog
-
-- ???
-
 ## Unix Command
 
 ```sh
@@ -30,7 +14,6 @@ java -cp ./Java/classes ${packageName}.${className}
 // 컴파일된 class 삭제
 rm -rf ./Java/classes && rm ./JUnit/*.class
 ```
-
 
 ## CMD Command
 
