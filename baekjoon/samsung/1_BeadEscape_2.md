@@ -355,9 +355,9 @@ class Main {
 
   public static void main(String[] args) throws IOException {
     initIO();
-    String[] nm = br.readLine().split(" ");
-    n = Integer.parseInt(nm[0]);
-    m = Integer.parseInt(nm[1]);
+    StringTokenizer st = new StringTokenizer(br.readLine());
+    n = Integer.parseInt(st.nextToken());
+    m = Integer.parseInt(st.nextToken());
     board = new char[n][m];
     queue = new LinkedList<Node>();
 
