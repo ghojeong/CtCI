@@ -2,30 +2,31 @@ package sort;
 
 public class Quick {
 
-  public static void swap(int arr[], int i, int j) {
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
+  public static void swap(int array[], int idx1, int idx2) {
+    int value = array[idx1];
+    array[idx1] = array[idx2];
+    array[idx2] = value;
   }
 
-  private static int partition(int arr[], int low, int high) {
-    int pivot = arr[high];
-    int pi = low; // partitioning index
-    for (int i = low; i < high; i++) {
-      if (arr[i] < pivot) {
-        swap(arr, pi++, i);
+  public static int partition(int array[], int lowIdx, int highIdx) {
+    int pivotValue = array[highIdx];
+    int pivotIdx = lowIdx;
+    for (int i = lowIdx; i < highIdx; i++) {
+      if (array[i] < pivotValue) {
+        swap(array, pivotIdx++, i);
       }
     }
-    swap(arr, pi, high);
-    return pi;
+    swap(array, pivotIdx, highIdx);
+    return pivotIdx;
   }
 
-  private static void sort(int arr[], int low, int high) {
-    if (low < high) {
-      int pi = partition(arr, low, high); // partitioning index
-      sort(arr, low, pi - 1);
-      sort(arr, pi + 1, high);
+  public static void sort(int array[], int lowIdx, int highIdx) {
+    if (lowIdx >= highIdx) {
+      return;
     }
+    int pivotIdx = partition(array, lowIdx, highIdx);
+    sort(array, lowIdx, pivotIdx - 1);
+    sort(array, pivotIdx + 1, highIdx);
   }
 
   public static int[] sorted(int[] array) {
